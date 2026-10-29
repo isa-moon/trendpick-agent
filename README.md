@@ -15,20 +15,20 @@
 | **为什么是这个品牌** | 五维：受众重合、产品接得住、调性不冲突、窗口够、没被做烂。每一维写依据，不打分 |
 | **哪里会翻车** | 品牌、竞品、品类、原料四组词的舆情；灾难、战争、民族情绪事件；功效暗示、IP 肖像、国家象征等黄线 |
 
-## 两个真实案例（2026-10-28，数据截至 10-27）
+## 三个真实案例（2026-10-28 / 29，数据截至 10-27 / 28）
 
-| | 星巴克中国（国内） | 极石 ROX（中东 UAE + 沙特） |
-|---|---|---|
-| 数据 | 抖音、微博、B站、知乎热榜 6 周，21,677 条 | X 当地热门 + Wikipedia 年度事件页 + Bing News + KOX TikTok 视频检索 36 次 |
-| 先查自己 | 「消费入座」负面发酵中；品类有"咖啡与骨质疏松"传闻；原料有"硫磺熏制桂花" | 品牌声量很小、无负面；**沙特用户 10/27 起抵制 TikTok** |
-| 大环境 | 10/22 西藏 7.0 级地震；10/27 姆巴佩事件 | 美以—伊朗战争；沙特持续遭胡塞袭击 |
-| 追 | 可可系 × 摩卡；冷空气已到货 × 热饮（禁"进店取暖"画面） | UAE 冬季露营季 × 对外放电；UAE 国庆 12/2 ×「在阿布扎比造」。沙特本窗口不走 TikTok |
-| 跳过（节选） | 「不烧心」（已过峰 + 功效暗示）、「喝大水」、「纯过日子」、万圣节（来不及） | TikTok 抵制本身、"防弹 / 安全感"叙事、「沙特丝绸之路」（查证后是电商推广）、国旗日（来不及） |
-| 评分（12 项） | 不装 skill 3 / 12 → 装 skill 12 / 12 | 不装 skill 5.5 / 11 → 装 skill 10.5 / 11 |
+| | 星巴克中国（国内·咖啡） | 安踏（国内·运动） | 极石 ROX（中东 UAE + 沙特） |
+|---|---|---|---|
+| 数据 | 抖音、微博、B站、知乎热榜 6 周，21,677 条 | 同样四个平台 6 周半，23,818 条 | X 当地热门 + Wikipedia 年度事件页 + Bing News + KOX TikTok 视频检索 36 次 |
+| 先查自己 | 「消费入座」负面发酵中；品类有"咖啡与骨质疏松"传闻；原料有"硫磺熏制桂花" | 刚官宣代言人（正面）+「卖不动了」（负面）同周在榜；羽绒价格战；两起半马猝死 | 品牌声量很小、无负面；**沙特用户 10/27 起抵制 TikTok** |
+| 大环境 | 10/22 西藏 7.0 级地震；10/27 姆巴佩事件 | 同一场地震和姆巴佩事件，但对运动品牌更近：全案不用足球；另有旭日旗事件、长征 90 周年 | 美以—伊朗战争；沙特持续遭胡塞袭击 |
+| 追 | 可可系 × 摩卡；冷空气已到货 × 热饮（禁"进店取暖"画面） | 立冬 × 寒潮「穿对第一件冬装」；「拿到大结果」× 普通人的训练进步（须 11-04 前上线） | UAE 冬季露营季 × 对外放电；UAE 国庆 12/2 ×「在阿布扎比造」。沙特本窗口不走 TikTok |
+| 跳过（节选） | 「不烧心」（已过峰 + 功效暗示）、「喝大水」、「纯过日子」、万圣节（来不及） | 「不烧心」（已过峰 + 产品接不住）、闪身步（代言人跳过也不追：已过峰两周）、郑钦文（耐克签约）、双 11（被平台占满）、长征 90 周年（红线） | TikTok 抵制本身、"防弹 / 安全感"叙事、「沙特丝绸之路」（查证后是电商推广）、国旗日（来不及） |
+| 评分（12 项） | 不装 skill 3 / 12 → 装 skill 12 / 12 | 不装 skill 4 / 12 → 装 skill 12 / 12 | 不装 skill 5.5 / 11 → 装 skill 10.5 / 11 |
 
-ROX 一列是盲测版本：另起一个 Agent，只给它 skill 和需求。
+安踏和 ROX 两列是盲测版本：另起一个 Agent，只给它 skill 和需求（安踏那次是 Agent 自己从 GitHub 装的 skill）。
 
-不装 skill 的 AI 给星巴克的第一推荐是「这杯喝了不烧心」。详见 [cases/](cases/) 和 [evals/README.md](evals/README.md)。
+星巴克和安踏用的是同一个月的热榜，结论却不同：同样是冷空气，一个挂热饮、一个挂立冬穿搭；同样是姆巴佩事件，对咖啡只是跳过一条，对运动品牌是全案不碰足球。不装 skill 的 AI 给两个品牌的第一推荐，都是已经过峰的「不烧心」。详见 [cases/](cases/) 和 [evals/README.md](evals/README.md)。
 
 ## 为什么不会被模型迭代取代
 
@@ -55,19 +55,20 @@ npx skills add isa-moon/trendpick-agent -g
 ### 给 Agent 的安装步骤
 
 1. 要安装的只有仓库里的 `skills/trendpick-agent/` 文件夹，不是整个仓库
-2. 目标目录按你所在的 Agent 选：Claude Code 是 `~/.claude/skills/`，Codex 是 `~/.codex/skills/`；其他 Agent 用它自己的用户级 skills 目录，不确定就问用户
-3. 下载并复制（有 git 用 git，没有就用 curl）：
+2. 目标目录按你所在的 Agent 选：Claude Code 是 `~/.claude/skills/`，Codex 是 `~/.codex/skills/`；其他 Agent 用它自己的用户级 skills 目录；用户指定了目录就用用户的；不确定就问用户
+3. 下载并复制（有 git 用 git，没有就用 curl）。先把 `dest` 改成上一步选的目录：
    ```bash
+   dest=~/.claude/skills
    tmp=$(mktemp -d)
    git clone --depth 1 https://github.com/isa-moon/trendpick-agent "$tmp/repo" \
      || (mkdir -p "$tmp/repo" && curl -fsSL https://github.com/isa-moon/trendpick-agent/archive/refs/heads/main.tar.gz | tar xz -C "$tmp/repo" --strip-components 1)
-   mkdir -p ~/.claude/skills
-   rm -rf ~/.claude/skills/trendpick-agent
-   cp -R "$tmp/repo/skills/trendpick-agent" ~/.claude/skills/
+   mkdir -p "$dest"
+   rm -rf "$dest/trendpick-agent"
+   cp -R "$tmp/repo/skills/trendpick-agent" "$dest/"
    rm -rf "$tmp"
    ```
    只替换 `trendpick-agent` 这一个文件夹，不要动 skills 目录里的其他 skill
-4. 检查 `~/.claude/skills/trendpick-agent/SKILL.md` 存在，告诉用户装在哪、要重启 Agent，以及可以怎么开始用（见下）
+4. 验证：`test -f "$dest/trendpick-agent/SKILL.md" && python3 "$dest/trendpick-agent/scripts/trend_stage.py" -h >/dev/null && echo OK`（没有 Python 时只检查 SKILL.md）。然后告诉用户装在哪、要重启 Agent，以及可以怎么开始用（见下）
 5. 不需要现在装蓝优选热点 MCP 或 KOX。第一次使用时 skill 会检查，缺了再提示
 
 ## 使用
@@ -109,7 +110,7 @@ trendpick-agent/
 │   └── scripts/
 │       ├── trend_stage.py        热榜聚类、逐日曲线、生命周期初判、句式梗发现
 │       └── video_pulse.py        海外视频脉搏：真命中过滤、按周发布分布、头部视频
-├── cases/                        两个真实案例的交付物和聚类结果（原始热榜数据不随仓库发布）
+├── cases/                        星巴克、ROX 的交付物和聚类结果；安踏的在 evals/（原始热榜数据不随仓库发布）
 └── evals/                        基线、装 skill 后的产出、评分表、触发正反例（不随 skill 安装）
 ```
 

@@ -12,6 +12,8 @@
 
 - 只提本次需求用得到的工具：国内需求不提 KOX，海外需求不提热点 MCP
 - 缺工具时，在对齐需求那一轮里一起说：缺什么、影响什么、怎么装。用户不回答就用备选方案继续做，不要停下来等
+- 检查时只看工具列表和命令的返回值，**不要打印或读取 MCP 配置文件的原文**，里面有 Key
+- MCP 配置了、但工具列表里没有（配置后还没重启，或你是作为子 Agent 运行的）：请用户重启 Agent 或在主会话里跑，不要自己从配置文件读 Key 去直连。用户不在场就用备选，交付物里写明
 - Key 和 token 由用户自己提供。不要回显到对话，不要写进台账、memory 或任何项目文件。KOX 的安装命令里带个人 token，让用户从平台复制，不要代拼
 
 ## §1 国内热榜
@@ -26,7 +28,8 @@
 - 下载到工作目录，交给 `scripts/trend_stage.py` 处理。
 
 数据特性（会影响判断）：
-- 条目是**话题**，不是帖子；`热点链接`是平台搜索页，不是某条内容
+- 条目是**话题**，不是帖子；`热点链接`是平台搜索页，不是某条内容。它能证明"这个话题哪天上过榜"，可以当梗和数据的出处；但不能当参考内容，参考内容要用具体内容页
+- 平台字段可能是「哔哩哔哩」，脚本统一显示为「B站」
 - `热度值`单位是"万"，**各平台口径不同，不能跨平台比较**；脚本里一律换算成平台内当日名次
 - 每天凌晨采集，**只能查到昨天**；交付物里写"数据截至 X 月 X 日"
 - 单个标题寿命极短，见 `judgment.md` §3
@@ -61,8 +64,9 @@ python3 scripts/trend_stage.py data/*.xlsx \
 - 支持 xlsx（热点 MCP 的导出）、JSON（MCP 原始返回）、同名列的 CSV
 - `--asof` 指定"今天"；默认取数据里最晚的上榜日
 - 初判只看曲线，**你要复核**：查看代表条目有没有误命中，结合饱和度和品牌状态修正阶段
+- 正则默认不区分大小写；全是大写的拉丁词（`ANTA|安踏`）自动区分大小写，避免命中 Fantasy。大小写混写的品牌名用 `(?-i:Lululemon)`
 - `--show N` 控制每簇显示多少条代表条目（默认 8，`--show 0` 显示全部），查误命中时调大
-- `--json` 输出里每簇是 `{cluster, regex, stage, hits, days_on, first, last, idle_days, platforms, daily, examples}`
+- `--json` 输出里每簇是 `{cluster, regex, stage, hits, days_on, first, last, idle_days, platforms, daily, weekly, steady, examples}`；`weekly[0]` 是最近 7 天，`steady` 为 true 表示可能是常驻说法
 - 总共不到 5 条的簇标「样本不足」；连续 5 周以上平稳出现的簇会打 ⚠「可能是常驻说法」；节日、大促、节气按日期排期，不看脚本给的阶段（`judgment.md` §3）
 
 **怎么发现梗**：总览模式按标题排序，梗不会自己冒出来。两种办法：
@@ -116,6 +120,7 @@ python3 scripts/trend_stage.py data/*.xlsx --patterns --top 40
 |---|---|---|
 | 这个梗有没有真实的爆款内容 | blueai-social-media-data 关键词搜帖子（T+1）；blueai-universal-crawler 搜抖音、B站 | KOX `search-video --query "<梗或标签>" --locations "AE,SA" --days 30 --sort views` |
 | 已有多少品牌做过（饱和度） | 同上，搜「梗 + 品类」，统计蓝 V 和品牌号的数量 | 同上，看结果里品牌账号和带货内容的占比 |
+| 没有上面的付费工具时 | 看热榜簇里有没有品牌、平台、电商条目，卡片上写上线前人工自查（`judgment.md` §3） | KOX 结果里品牌号的占比 |
 | 谁适合拍 | douyin-kol-discovery | KOX `search-video` 找发过同类内容的达人；完整 brief 用 kox-recommend |
 | 竞品合作过哪些达人 | — | KOX `query --type brand` |
 

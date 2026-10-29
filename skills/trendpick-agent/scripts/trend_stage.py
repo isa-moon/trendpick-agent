@@ -11,7 +11,7 @@
                          [--asof YYYY-MM-DD] [--min-days 1] [--json OUT.json]
   python3 trend_stage.py FILE [FILE ...] --cluster 名称=正则 [--cluster ...] [--show 8]
   python3 trend_stage.py FILE [FILE ...] --patterns [--middle] [--top 40]
-  --grep  只保留标题含任一关键词的话题（| 分隔，不区分大小写）。单个标题寿命太短，不给阶段，只用来找线索
+  --grep  只保留标题含任一关键词的话题（| 分隔；正则里没有小写字母时区分大小写，ANTA 不会命中 Fantasy）。单个标题寿命太短，不给阶段，只用来找线索
   --cluster  梗级聚类：热榜标题几乎每天都换写法，单标题很少在榜超过 2 天，
              所以判断一个梗的生命周期要把它的变体合成一簇看逐日曲线
   --show   每簇显示多少条代表条目（默认 8，0 = 全部），查误命中时调大
@@ -27,6 +27,7 @@ from datetime import date, timedelta
 
 NS = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 PLATFORM_NAMES = {1: "抖音", 3: "B站", 5: "微博", 8: "知乎"}
+PLATFORM_ALIASES = {"哔哩哔哩": "B站", "bilibili": "B站"}
 FIELD_ALIASES = {
     "platform": ["平台", "platform"],
     "board": ["榜单名称", "board_name"],
@@ -88,6 +89,12 @@ def norm_title(t):
     return re.sub(r"[\s#＃“”\"'‘’：:，,。！!？?、·|｜【】\[\]（）()]", "", t).lower()
 
 
+def compile_rx(rx):
+    # 纯大写的拉丁词（品牌名 ANTA、FILA）不区分大小写会误命中 Fantasy、Filament，所以这种情况区分大小写
+    bare = re.sub(r"\\.", "", rx)
+    return re.compile(rx, 0 if re.search(r"[A-Z]", bare) and not re.search(r"[a-z]", bare) else re.I)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("files", nargs="+")
@@ -110,6 +117,7 @@ def main():
                 continue
             plat = pick(r, "platform")
             plat = PLATFORM_NAMES.get(int(plat), plat) if str(plat).isdigit() else str(plat)
+            plat = PLATFORM_ALIASES.get(plat, plat)
             board = str(pick(r, "board"))
             if board and board not in ("总榜", "热搜榜", "热榜", "全站日榜"):
                 plat = f"{plat}-{board}"
@@ -150,7 +158,7 @@ def main():
         rk, _ = rank[(r["plat"], r["day"], r["title"])]
         t["best"][r["plat"]] = min(t["best"].get(r["plat"], 9999), rk)
 
-    pat = re.compile(a.grep, re.I) if a.grep else None
+    pat = compile_rx(a.grep) if a.grep else None
     out = []
     for k, t in topics.items():
         title = max(t["titles"], key=len)
@@ -216,12 +224,14 @@ def cluster_stage(daily, asof):
 
 def run_clusters(a, recs, rank, asof):
     report = []
+    print("# 阶段只对梗有意义。品牌、竞品、新闻簇只看近 7 天有没有、几条、名次多少，不看阶段")
     for spec in a.cluster:
         name, _, rx = spec.partition("=")
-        pat = re.compile(rx or name, re.I)
+        pat = compile_rx(rx or name)
         hits = [r for r in recs if pat.search(r["title"])]
         if not hits:
             print(f"\n## {name}：0 条命中（{rx}）")
+            print("如果这是节点（节日、节气、大促），热榜上还没出现是正常的：按日期排期，不看曲线（judgment.md §3）")
             report.append({"cluster": name, "hits": 0})
             continue
         daily, plats, best = defaultdict(int), defaultdict(int), {}
@@ -242,7 +252,13 @@ def run_clusters(a, recs, rank, asof):
         weeks = [sum(n for d, n in daily.items() if k * 7 <= (asof - date.fromisoformat(d)).days < k * 7 + 7)
                  for k in range((asof - date.fromisoformat(days[0])).days // 7 + 1)]
         print("逐周（W0 = 最近 7 天）：" + " ".join(f"W{k}:{n}" for k, n in enumerate(weeks)))
-        steady = len(weeks) >= 5 and min(weeks) > 0 and max(weeks) <= min(8, 2 * sorted(weeks)[len(weeks) // 2])
+        # 常驻：每周都有、量不小、没有峰，而且最近两周没有在涨（慢热的新梗会在涨）
+        med = sorted(weeks)[len(weeks) // 2]
+        steady = (len(weeks) >= 5 and min(weeks) > 0 and med >= 2 and sum(weeks) >= 10
+                  and max(weeks) <= min(8, 2 * med)
+                  and sum(weeks[:2]) / 2 <= 1.5 * sum(weeks[2:]) / len(weeks[2:]))
+        if len(seen) < 10:
+            print(f"⚠ 只有 {len(seen)} 条：阶段对一两条的增减很敏感，剔除误命中后重跑，并逐条看代表条目")
         if steady:
             print("⚠ 连续 5 周以上每周都有、没有明显的峰：可能是常驻说法，不是热梗（judgment.md §3）")
         print("平台：" + " ".join(f"{p}×{n}" for p, n in sorted(plats.items(), key=lambda x: -x[1])))
