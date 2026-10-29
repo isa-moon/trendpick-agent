@@ -1,0 +1,825 @@
+{
+ "asof": "2026-10-27",
+ "clusters": [
+  {
+   "cluster": "星巴克自身",
+   "regex": "星巴克|消费入座|一人一座|58元咖啡",
+   "stage": "爆发",
+   "hits": 15,
+   "days_on": 10,
+   "first": "2026-10-04",
+   "last": "2026-10-27",
+   "idle_days": 0,
+   "platforms": {
+    "微博": 11,
+    "知乎": 4
+   },
+   "daily": {
+    "2026-10-04": 2,
+    "2026-10-06": 1,
+    "2026-10-13": 2,
+    "2026-10-19": 2,
+    "2026-10-20": 1,
+    "2026-10-21": 1,
+    "2026-10-22": 1,
+    "2026-10-23": 2,
+    "2026-10-26": 1,
+    "2026-10-27": 2
+   },
+   "examples": [
+    {
+     "title": "夫妻点一杯 58 元咖啡只能一人落座，市监局称「一人一座一消费」合理与否不能一刀切判定，如何理解此事？",
+     "platform": "知乎",
+     "rank": 2,
+     "day": "2026-10-13",
+     "url": "https://www.zhihu.com/question/2093309415939991490"
+    },
+    {
+     "title": "中国人已经对星巴克祛魅",
+     "platform": "微博",
+     "rank": 9,
+     "day": "2026-10-06",
+     "url": "https://s.weibo.com/weibo?q=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%B7%B2%E7%BB%8F%E5%AF%B9%E6%98%9F%E5%B7%B4%E5%85%8B%E7%A5%9B%E9%AD%85"
+    },
+    {
+     "title": "星巴克店员称 10 月 20 日起实施「消费入座」新规，你支持吗？落地难度大吗？",
+     "platform": "知乎",
+     "rank": 24,
+     "day": "2026-10-20",
+     "url": "https://www.zhihu.com/question/2095573616037573028"
+    },
+    {
+     "title": "夫妻点一杯58元咖啡只能一人落座",
+     "platform": "微博",
+     "rank": 27,
+     "day": "2026-10-13",
+     "url": "https://s.weibo.com/weibo?q=%E5%A4%AB%E5%A6%BB%E7%82%B9%E4%B8%80%E6%9D%AF58%E5%85%83%E5%92%96%E5%95%A1%E5%8F%AA%E8%83%BD%E4%B8%80%E4%BA%BA%E8%90%BD%E5%BA%A7"
+    },
+    {
+     "title": "星巴克不欠谁的",
+     "platform": "微博",
+     "rank": 31,
+     "day": "2026-10-26",
+     "url": "https://s.weibo.com/weibo?q=%E6%98%9F%E5%B7%B4%E5%85%8B%E4%B8%8D%E6%AC%A0%E8%B0%81%E7%9A%84"
+    },
+    {
+     "title": "星巴克 消费入座",
+     "platform": "微博",
+     "rank": 82,
+     "day": "2026-10-19",
+     "url": "https://s.weibo.com/weibo?q=%E6%98%9F%E5%B7%B4%E5%85%8B+%E6%B6%88%E8%B4%B9%E5%85%A5%E5%BA%A7"
+    },
+    {
+     "title": "星巴克将实施消费才可入座规则",
+     "platform": "微博",
+     "rank": 83,
+     "day": "2026-10-19",
+     "url": "https://s.weibo.com/weibo?q=%E6%98%9F%E5%B7%B4%E5%85%8B%E5%B0%86%E5%AE%9E%E6%96%BD%E6%B6%88%E8%B4%B9%E6%89%8D%E5%8F%AF%E5%85%A5%E5%BA%A7%E8%A7%84%E5%88%99"
+    },
+    {
+     "title": "星巴克施行消费入座，门店店员称「消费入座」为倡议性质，空座充足时不会劝离，会增加一线员工负担吗？",
+     "platform": "知乎",
+     "rank": 103,
+     "day": "2026-10-23",
+     "url": "https://www.zhihu.com/question/2096615362607445595"
+    }
+   ]
+  },
+  {
+   "cluster": "竞品",
+   "regex": "瑞幸|霸王茶姬|库迪|蜜雪|喜茶|Manner",
+   "stage": "衰退",
+   "hits": 34,
+   "days_on": 10,
+   "first": "2026-09-18",
+   "last": "2026-10-27",
+   "idle_days": 0,
+   "platforms": {
+    "微博": 30,
+    "知乎": 4
+   },
+   "daily": {
+    "2026-09-18": 1,
+    "2026-09-29": 1,
+    "2026-09-30": 1,
+    "2026-10-06": 2,
+    "2026-10-09": 1,
+    "2026-10-12": 17,
+    "2026-10-13": 7,
+    "2026-10-14": 2,
+    "2026-10-17": 1,
+    "2026-10-27": 1
+   },
+   "examples": [
+    {
+     "title": "霸王茶姬接不住爆单犯了低级失误",
+     "platform": "微博",
+     "rank": 1,
+     "day": "2026-10-12",
+     "url": "https://s.weibo.com/weibo?q=%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC%E6%8E%A5%E4%B8%8D%E4%BD%8F%E7%88%86%E5%8D%95%E7%8A%AF%E4%BA%86%E4%BD%8E%E7%BA%A7%E5%A4%B1%E8%AF%AF"
+    },
+    {
+     "title": "霸王茶姬奖励员工 1350 万元，350 万元团建费，1000 万元红包，全部给到一线门店员工，如何评价此举？",
+     "platform": "知乎",
+     "rank": 5,
+     "day": "2026-10-12",
+     "url": "https://www.zhihu.com/question/2093064242601762869"
+    },
+    {
+     "title": "霸王茶姬买一送一",
+     "platform": "微博",
+     "rank": 16,
+     "day": "2026-10-12",
+     "url": "https://s.weibo.com/weibo?q=%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC%E4%B9%B0%E4%B8%80%E9%80%81%E4%B8%80"
+    },
+    {
+     "title": "霸王茶姬回应小程序崩了",
+     "platform": "微博",
+     "rank": 17,
+     "day": "2026-10-12",
+     "url": "https://s.weibo.com/weibo?q=%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC%E5%9B%9E%E5%BA%94%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B4%A9%E4%BA%86"
+    },
+    {
+     "title": "霸王茶姬开启买一送一大促，小程序一度崩溃，店员无奈劝退消费者，商家的活动组织和预案出现了哪些问题？",
+     "platform": "知乎",
+     "rank": 31,
+     "day": "2026-10-12",
+     "url": "https://www.zhihu.com/question/2092973087201257351"
+    },
+    {
+     "title": "霸王茶姬格局",
+     "platform": "微博",
+     "rank": 38,
+     "day": "2026-10-14",
+     "url": "https://s.weibo.com/weibo?q=%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC%E6%A0%BC%E5%B1%80"
+    },
+    {
+     "title": "霸王茶姬 涨工资",
+     "platform": "微博",
+     "rank": 43,
+     "day": "2026-10-12",
+     "url": "https://s.weibo.com/weibo?q=%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC+%E6%B6%A8%E5%B7%A5%E8%B5%84"
+    },
+    {
+     "title": "霸王茶姬买一送一赢了订单输了体验",
+     "platform": "微博",
+     "rank": 47,
+     "day": "2026-10-12",
+     "url": "https://s.weibo.com/weibo?q=%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC%E4%B9%B0%E4%B8%80%E9%80%81%E4%B8%80%E8%B5%A2%E4%BA%86%E8%AE%A2%E5%8D%95%E8%BE%93%E4%BA%86%E4%BD%93%E9%AA%8C"
+    }
+   ]
+  },
+  {
+   "cluster": "不烧心",
+   "regex": "不烧心",
+   "stage": "衰退",
+   "hits": 53,
+   "days_on": 23,
+   "first": "2026-10-01",
+   "last": "2026-10-27",
+   "idle_days": 0,
+   "platforms": {
+    "抖音": 36,
+    "微博": 6,
+    "哔哩哔哩": 10,
+    "知乎": 1
+   },
+   "daily": {
+    "2026-10-01": 1,
+    "2026-10-02": 2,
+    "2026-10-03": 1,
+    "2026-10-04": 1,
+    "2026-10-05": 2,
+    "2026-10-06": 2,
+    "2026-10-08": 1,
+    "2026-10-09": 7,
+    "2026-10-10": 3,
+    "2026-10-11": 3,
+    "2026-10-12": 3,
+    "2026-10-13": 1,
+    "2026-10-14": 1,
+    "2026-10-15": 3,
+    "2026-10-16": 3,
+    "2026-10-17": 4,
+    "2026-10-18": 3,
+    "2026-10-19": 5,
+    "2026-10-21": 2,
+    "2026-10-22": 2,
+    "2026-10-24": 1,
+    "2026-10-26": 1,
+    "2026-10-27": 1
+   },
+   "examples": [
+    {
+     "title": "不烧心的作业我不写！！！",
+     "platform": "哔哩哔哩",
+     "rank": 1,
+     "day": "2026-10-08",
+     "url": "https://www.bilibili.com/video/av117393602974201/"
+    },
+    {
+     "title": "不烧心",
+     "platform": "微博",
+     "rank": 3,
+     "day": "2026-10-02",
+     "url": "https://s.weibo.com/weibo?q=%E4%B8%8D%E7%83%A7%E5%BF%83"
+    },
+    {
+     "title": "看这个视频我不烧心！",
+     "platform": "哔哩哔哩",
+     "rank": 3,
+     "day": "2026-10-05",
+     "url": "https://www.bilibili.com/video/av117382194401331/"
+    },
+    {
+     "title": "泰坦磨的面吃着不烧心",
+     "platform": "哔哩哔哩",
+     "rank": 4,
+     "day": "2026-10-11",
+     "url": "https://www.bilibili.com/video/av117398602581122/"
+    },
+    {
+     "title": "如何评价最近爆火的「不烧心」梗？",
+     "platform": "知乎",
+     "rank": 6,
+     "day": "2026-10-09",
+     "url": "https://www.zhihu.com/question/2089435419062579529"
+    },
+    {
+     "title": "这铠玩着不烧心",
+     "platform": "哔哩哔哩",
+     "rank": 7,
+     "day": "2026-10-13",
+     "url": "https://www.bilibili.com/video/av117415832786407/"
+    },
+    {
+     "title": "这样的景区逛着不烧心",
+     "platform": "抖音",
+     "rank": 7,
+     "day": "2026-10-26",
+     "url": "https://www.douyin.com/search/%E8%BF%99%E6%A0%B7%E7%9A%84%E6%99%AF%E5%8C%BA%E9%80%9B%E7%9D%80%E4%B8%8D%E7%83%A7%E5%BF%83"
+    },
+    {
+     "title": "这顿饭已严肃品鉴不烧心",
+     "platform": "抖音",
+     "rank": 8,
+     "day": "2026-10-04",
+     "url": "https://www.douyin.com/search/%E8%BF%99%E9%A1%BF%E9%A5%AD%E5%B7%B2%E4%B8%A5%E8%82%83%E5%93%81%E9%89%B4%E4%B8%8D%E7%83%A7%E5%BF%83"
+    }
+   ]
+  },
+  {
+   "cluster": "可可系",
+   "regex": "可可(系|妆|色|穿搭)",
+   "stage": "爆发",
+   "hits": 13,
+   "days_on": 12,
+   "first": "2026-09-18",
+   "last": "2026-10-26",
+   "idle_days": 1,
+   "platforms": {
+    "抖音": 13
+   },
+   "daily": {
+    "2026-09-18": 1,
+    "2026-09-21": 1,
+    "2026-09-24": 1,
+    "2026-09-29": 1,
+    "2026-10-10": 1,
+    "2026-10-15": 1,
+    "2026-10-19": 1,
+    "2026-10-20": 1,
+    "2026-10-21": 1,
+    "2026-10-22": 1,
+    "2026-10-23": 2,
+    "2026-10-26": 1
+   },
+   "examples": [
+    {
+     "title": "绝美旗袍可可妆",
+     "platform": "抖音",
+     "rank": 15,
+     "day": "2026-10-20",
+     "url": "https://www.douyin.com/search/%E7%BB%9D%E7%BE%8E%E6%97%97%E8%A2%8D%E5%8F%AF%E5%8F%AF%E5%A6%86"
+    },
+    {
+     "title": "维密大秀上的可可系穿搭",
+     "platform": "抖音",
+     "rank": 49,
+     "day": "2026-10-21",
+     "url": "https://www.douyin.com/search/%E7%BB%B4%E5%AF%86%E5%A4%A7%E7%A7%80%E4%B8%8A%E7%9A%84%E5%8F%AF%E5%8F%AF%E7%B3%BB%E7%A9%BF%E6%90%AD"
+    },
+    {
+     "title": "秋天最有腔调的流金可可妆",
+     "platform": "抖音",
+     "rank": 57,
+     "day": "2026-10-15",
+     "url": "https://www.douyin.com/search/%E7%A7%8B%E5%A4%A9%E6%9C%80%E6%9C%89%E8%85%94%E8%B0%83%E7%9A%84%E6%B5%81%E9%87%91%E5%8F%AF%E5%8F%AF%E5%A6%86"
+    },
+    {
+     "title": "可可系穿搭狠狠击中我的审美",
+     "platform": "抖音",
+     "rank": 66,
+     "day": "2026-10-23",
+     "url": "https://www.douyin.com/search/%E5%8F%AF%E5%8F%AF%E7%B3%BB%E7%A9%BF%E6%90%AD%E7%8B%A0%E7%8B%A0%E5%87%BB%E4%B8%AD%E6%88%91%E7%9A%84%E5%AE%A1%E7%BE%8E"
+    },
+    {
+     "title": "氧化菊白昼小熊穿可可系好养眼",
+     "platform": "抖音",
+     "rank": 70,
+     "day": "2026-09-21",
+     "url": "https://www.douyin.com/search/%E6%B0%A7%E5%8C%96%E8%8F%8A%E7%99%BD%E6%98%BC%E5%B0%8F%E7%86%8A%E7%A9%BF%E5%8F%AF%E5%8F%AF%E7%B3%BB%E5%A5%BD%E5%85%BB%E7%9C%BC"
+    },
+    {
+     "title": "可可系红毯造型好权威",
+     "platform": "抖音",
+     "rank": 71,
+     "day": "2026-10-23",
+     "url": "https://www.douyin.com/search/%E5%8F%AF%E5%8F%AF%E7%B3%BB%E7%BA%A2%E6%AF%AF%E9%80%A0%E5%9E%8B%E5%A5%BD%E6%9D%83%E5%A8%81"
+    },
+    {
+     "title": "可可妆爱用物repo",
+     "platform": "抖音",
+     "rank": 72,
+     "day": "2026-09-18",
+     "url": "https://www.douyin.com/search/%E5%8F%AF%E5%8F%AF%E5%A6%86%E7%88%B1%E7%94%A8%E7%89%A9repo"
+    },
+    {
+     "title": "中秋化这个中式阔面可可妆",
+     "platform": "抖音",
+     "rank": 73,
+     "day": "2026-09-24",
+     "url": "https://www.douyin.com/search/%E4%B8%AD%E7%A7%8B%E5%8C%96%E8%BF%99%E4%B8%AA%E4%B8%AD%E5%BC%8F%E9%98%94%E9%9D%A2%E5%8F%AF%E5%8F%AF%E5%A6%86"
+    }
+   ]
+  },
+  {
+   "cluster": "降温",
+   "regex": "降温|冷空气|寒潮|入冬",
+   "stage": "爆发",
+   "hits": 11,
+   "days_on": 9,
+   "first": "2026-09-27",
+   "last": "2026-10-27",
+   "idle_days": 0,
+   "platforms": {
+    "微博": 4,
+    "抖音": 5,
+    "知乎": 2
+   },
+   "daily": {
+    "2026-09-27": 1,
+    "2026-10-05": 1,
+    "2026-10-10": 1,
+    "2026-10-15": 1,
+    "2026-10-20": 2,
+    "2026-10-21": 1,
+    "2026-10-22": 1,
+    "2026-10-25": 1,
+    "2026-10-27": 2
+   },
+   "examples": [
+    {
+     "title": "新一股冷空气将影响长江以北大部",
+     "platform": "抖音",
+     "rank": 13,
+     "day": "2026-10-25",
+     "url": "https://www.douyin.com/search/%E6%96%B0%E4%B8%80%E8%82%A1%E5%86%B7%E7%A9%BA%E6%B0%94%E5%B0%86%E5%BD%B1%E5%93%8D%E9%95%BF%E6%B1%9F%E4%BB%A5%E5%8C%97%E5%A4%A7%E9%83%A8"
+    },
+    {
+     "title": "降温上淘宝保暖爆款5折起",
+     "platform": "微博",
+     "rank": 14,
+     "day": "2026-10-27",
+     "url": "https://s.weibo.com/weibo?q=%E9%99%8D%E6%B8%A9%E4%B8%8A%E6%B7%98%E5%AE%9D%E4%BF%9D%E6%9A%96%E7%88%86%E6%AC%BE5%E6%8A%98%E8%B5%B7"
+    },
+    {
+     "title": "新一股冷空气携降雨降温来袭",
+     "platform": "抖音",
+     "rank": 20,
+     "day": "2026-10-15",
+     "url": "https://www.douyin.com/search/%E6%96%B0%E4%B8%80%E8%82%A1%E5%86%B7%E7%A9%BA%E6%B0%94%E6%90%BA%E9%99%8D%E9%9B%A8%E9%99%8D%E6%B8%A9%E6%9D%A5%E8%A2%AD"
+    },
+    {
+     "title": "冷空气已到货广东",
+     "platform": "抖音",
+     "rank": 46,
+     "day": "2026-10-05",
+     "url": "https://www.douyin.com/search/%E5%86%B7%E7%A9%BA%E6%B0%94%E5%B7%B2%E5%88%B0%E8%B4%A7%E5%B9%BF%E4%B8%9C"
+    },
+    {
+     "title": "冷空气袭来 可能最近要变天了",
+     "platform": "抖音",
+     "rank": 47,
+     "day": "2026-10-22",
+     "url": "https://www.douyin.com/search/%E5%86%B7%E7%A9%BA%E6%B0%94%E8%A2%AD%E6%9D%A5+%E5%8F%AF%E8%83%BD%E6%9C%80%E8%BF%91%E8%A6%81%E5%8F%98%E5%A4%A9%E4%BA%86"
+    },
+    {
+     "title": "多所高校研究生人数超本科生，「考研热」却在降温，原因是什么？读研是很多岗位的刚需吗？",
+     "platform": "知乎",
+     "rank": 63,
+     "day": "2026-10-20",
+     "url": "https://www.zhihu.com/question/2095813364634974062"
+    },
+    {
+     "title": "时间来不及细算直到冷空气袭来",
+     "platform": "抖音",
+     "rank": 80,
+     "day": "2026-10-10",
+     "url": "https://www.douyin.com/search/%E6%97%B6%E9%97%B4%E6%9D%A5%E4%B8%8D%E5%8F%8A%E7%BB%86%E7%AE%97%E7%9B%B4%E5%88%B0%E5%86%B7%E7%A9%BA%E6%B0%94%E8%A2%AD%E6%9D%A5"
+    },
+    {
+     "title": "降温该如何正确使用取暖神器",
+     "platform": "微博",
+     "rank": 91,
+     "day": "2026-10-21",
+     "url": "https://s.weibo.com/weibo?q=%E9%99%8D%E6%B8%A9%E8%AF%A5%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%8F%96%E6%9A%96%E7%A5%9E%E5%99%A8"
+    }
+   ]
+  },
+  {
+   "cluster": "万圣节",
+   "regex": "万圣",
+   "stage": "爆发",
+   "hits": 2,
+   "days_on": 2,
+   "first": "2026-10-13",
+   "last": "2026-10-22",
+   "idle_days": 5,
+   "platforms": {
+    "抖音": 2
+   },
+   "daily": {
+    "2026-10-13": 1,
+    "2026-10-22": 1
+   },
+   "examples": [
+    {
+     "title": "第五人格万圣节活动攻略",
+     "platform": "抖音",
+     "rank": 64,
+     "day": "2026-10-13",
+     "url": "https://www.douyin.com/search/%E7%AC%AC%E4%BA%94%E4%BA%BA%E6%A0%BC%E4%B8%87%E5%9C%A3%E8%8A%82%E6%B4%BB%E5%8A%A8%E6%94%BB%E7%95%A5"
+    },
+    {
+     "title": "万圣节我就这样萌萌cos雪宝",
+     "platform": "抖音",
+     "rank": 80,
+     "day": "2026-10-22",
+     "url": "https://www.douyin.com/search/%E4%B8%87%E5%9C%A3%E8%8A%82%E6%88%91%E5%B0%B1%E8%BF%99%E6%A0%B7%E8%90%8C%E8%90%8Ccos%E9%9B%AA%E5%AE%9D"
+    }
+   ]
+  },
+  {
+   "cluster": "双11",
+   "regex": "双11|双十一",
+   "stage": "衰退",
+   "hits": 44,
+   "days_on": 13,
+   "first": "2026-10-10",
+   "last": "2026-10-27",
+   "idle_days": 0,
+   "platforms": {
+    "知乎": 6,
+    "微博": 34,
+    "抖音": 4
+   },
+   "daily": {
+    "2026-10-10": 3,
+    "2026-10-12": 2,
+    "2026-10-13": 2,
+    "2026-10-14": 1,
+    "2026-10-15": 15,
+    "2026-10-16": 4,
+    "2026-10-19": 1,
+    "2026-10-20": 7,
+    "2026-10-21": 2,
+    "2026-10-23": 1,
+    "2026-10-24": 3,
+    "2026-10-25": 1,
+    "2026-10-27": 2
+   },
+   "examples": [
+    {
+     "title": "天猫双11第一波消费券来了",
+     "platform": "微博",
+     "rank": 2,
+     "day": "2026-10-13",
+     "url": "https://s.weibo.com/weibo?q=%E5%A4%A9%E7%8C%AB%E5%8F%8C11%E7%AC%AC%E4%B8%80%E6%B3%A2%E6%B6%88%E8%B4%B9%E5%88%B8%E6%9D%A5%E4%BA%86"
+    },
+    {
+     "title": "抖音商城双11超级补贴来啦",
+     "platform": "抖音",
+     "rank": 2,
+     "day": "2026-10-15",
+     "url": "https://www.douyin.com/search/%E6%8A%96%E9%9F%B3%E5%95%86%E5%9F%8E%E5%8F%8C11%E8%B6%85%E7%BA%A7%E8%A1%A5%E8%B4%B4%E6%9D%A5%E5%95%A6"
+    },
+    {
+     "title": "今晚8点上淘宝双11开卖",
+     "platform": "微博",
+     "rank": 3,
+     "day": "2026-10-20",
+     "url": "https://s.weibo.com/weibo?q=%E4%BB%8A%E6%99%9A8%E7%82%B9%E4%B8%8A%E6%B7%98%E5%AE%9D%E5%8F%8C11%E5%BC%80%E5%8D%96"
+    },
+    {
+     "title": "双11上淘宝王者好物加倍值得",
+     "platform": "微博",
+     "rank": 3,
+     "day": "2026-10-25",
+     "url": "https://s.weibo.com/weibo?q=%E5%8F%8C11%E4%B8%8A%E6%B7%98%E5%AE%9D%E7%8E%8B%E8%80%85%E5%A5%BD%E7%89%A9%E5%8A%A0%E5%80%8D%E5%80%BC%E5%BE%97"
+    },
+    {
+     "title": "天猫双11和王安宇打开淘宝出发",
+     "platform": "微博",
+     "rank": 3,
+     "day": "2026-10-27",
+     "url": "https://s.weibo.com/weibo?q=%E5%A4%A9%E7%8C%AB%E5%8F%8C11%E5%92%8C%E7%8E%8B%E5%AE%89%E5%AE%87%E6%89%93%E5%BC%80%E6%B7%98%E5%AE%9D%E5%87%BA%E5%8F%91"
+    },
+    {
+     "title": "寻新游园会在双11上新盛典",
+     "platform": "微博",
+     "rank": 4,
+     "day": "2026-10-23",
+     "url": "https://s.weibo.com/weibo?q=%E5%AF%BB%E6%96%B0%E6%B8%B8%E5%9B%AD%E4%BC%9A%E5%9C%A8%E5%8F%8C11%E4%B8%8A%E6%96%B0%E7%9B%9B%E5%85%B8"
+    },
+    {
+     "title": "20号晚8点上淘宝双11开卖",
+     "platform": "微博",
+     "rank": 5,
+     "day": "2026-10-15",
+     "url": "https://s.weibo.com/weibo?q=20%E5%8F%B7%E6%99%9A8%E7%82%B9%E4%B8%8A%E6%B7%98%E5%AE%9D%E5%8F%8C11%E5%BC%80%E5%8D%96"
+    },
+    {
+     "title": "今晚8点 双11京东开启",
+     "platform": "微博",
+     "rank": 7,
+     "day": "2026-10-12",
+     "url": "https://s.weibo.com/weibo?q=%E4%BB%8A%E6%99%9A8%E7%82%B9+%E5%8F%8C11%E4%BA%AC%E4%B8%9C%E5%BC%80%E5%90%AF"
+    }
+   ]
+  },
+  {
+   "cluster": "纯过日子",
+   "regex": "纯过日子",
+   "stage": "衰退",
+   "hits": 17,
+   "days_on": 12,
+   "first": "2026-09-23",
+   "last": "2026-10-22",
+   "idle_days": 5,
+   "platforms": {
+    "抖音": 12,
+    "知乎": 2,
+    "微博": 3
+   },
+   "daily": {
+    "2026-09-23": 3,
+    "2026-09-27": 1,
+    "2026-09-29": 1,
+    "2026-10-01": 1,
+    "2026-10-03": 2,
+    "2026-10-09": 2,
+    "2026-10-10": 1,
+    "2026-10-11": 1,
+    "2026-10-13": 1,
+    "2026-10-17": 2,
+    "2026-10-20": 1,
+    "2026-10-22": 1
+   },
+   "examples": [
+    {
+     "title": "现在才懂纯过日子假期的含金量",
+     "platform": "抖音",
+     "rank": 3,
+     "day": "2026-10-09",
+     "url": "https://www.douyin.com/search/%E7%8E%B0%E5%9C%A8%E6%89%8D%E6%87%82%E7%BA%AF%E8%BF%87%E6%97%A5%E5%AD%90%E5%81%87%E6%9C%9F%E7%9A%84%E5%90%AB%E9%87%91%E9%87%8F"
+    },
+    {
+     "title": "纯过日子就是好好生活",
+     "platform": "抖音",
+     "rank": 3,
+     "day": "2026-10-11",
+     "url": "https://www.douyin.com/search/%E7%BA%AF%E8%BF%87%E6%97%A5%E5%AD%90%E5%B0%B1%E6%98%AF%E5%A5%BD%E5%A5%BD%E7%94%9F%E6%B4%BB"
+    },
+    {
+     "title": "纯过日子人的另一面是有趣主义",
+     "platform": "抖音",
+     "rank": 16,
+     "day": "2026-10-10",
+     "url": "https://www.douyin.com/search/%E7%BA%AF%E8%BF%87%E6%97%A5%E5%AD%90%E4%BA%BA%E7%9A%84%E5%8F%A6%E4%B8%80%E9%9D%A2%E6%98%AF%E6%9C%89%E8%B6%A3%E4%B8%BB%E4%B9%89"
+    },
+    {
+     "title": "纯过日子就是记录一餐一饭",
+     "platform": "抖音",
+     "rank": 19,
+     "day": "2026-09-23",
+     "url": "https://www.douyin.com/search/%E7%BA%AF%E8%BF%87%E6%97%A5%E5%AD%90%E5%B0%B1%E6%98%AF%E8%AE%B0%E5%BD%95%E4%B8%80%E9%A4%90%E4%B8%80%E9%A5%AD"
+    },
+    {
+     "title": "全民进入纯过日子时代",
+     "platform": "抖音",
+     "rank": 25,
+     "day": "2026-09-29",
+     "url": "https://www.douyin.com/search/%E5%85%A8%E6%B0%91%E8%BF%9B%E5%85%A5%E7%BA%AF%E8%BF%87%E6%97%A5%E5%AD%90%E6%97%B6%E4%BB%A3"
+    },
+    {
+     "title": "为什么年轻人开始流行「纯过日子」？这是理性回归还是被迫收缩？",
+     "platform": "知乎",
+     "rank": 36,
+     "day": "2026-10-17",
+     "url": "https://www.zhihu.com/question/2092055159392282026"
+    },
+    {
+     "title": "在假期做一个纯过日子人",
+     "platform": "抖音",
+     "rank": 43,
+     "day": "2026-09-27",
+     "url": "https://www.douyin.com/search/%E5%9C%A8%E5%81%87%E6%9C%9F%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BA%AF%E8%BF%87%E6%97%A5%E5%AD%90%E4%BA%BA"
+    },
+    {
+     "title": "给大家推荐纯过日子月饼",
+     "platform": "抖音",
+     "rank": 46,
+     "day": "2026-09-23",
+     "url": "https://www.douyin.com/search/%E7%BB%99%E5%A4%A7%E5%AE%B6%E6%8E%A8%E8%8D%90%E7%BA%AF%E8%BF%87%E6%97%A5%E5%AD%90%E6%9C%88%E9%A5%BC"
+    }
+   ]
+  },
+  {
+   "cluster": "belike",
+   "regex": "belike|be like",
+   "stage": "衰退",
+   "hits": 30,
+   "days_on": 19,
+   "first": "2026-09-17",
+   "last": "2026-10-23",
+   "idle_days": 4,
+   "platforms": {
+    "抖音": 22,
+    "哔哩哔哩": 6,
+    "微博": 2
+   },
+   "daily": {
+    "2026-09-17": 2,
+    "2026-09-19": 1,
+    "2026-09-20": 1,
+    "2026-09-22": 1,
+    "2026-09-27": 1,
+    "2026-09-30": 2,
+    "2026-10-01": 1,
+    "2026-10-04": 2,
+    "2026-10-05": 1,
+    "2026-10-06": 1,
+    "2026-10-07": 4,
+    "2026-10-08": 2,
+    "2026-10-09": 1,
+    "2026-10-10": 4,
+    "2026-10-13": 1,
+    "2026-10-14": 2,
+    "2026-10-15": 1,
+    "2026-10-22": 1,
+    "2026-10-23": 1
+   },
+   "examples": [
+    {
+     "title": "我们重复型人格遇到美食belike",
+     "platform": "抖音",
+     "rank": 1,
+     "day": "2026-09-17",
+     "url": "https://www.douyin.com/search/%E6%88%91%E4%BB%AC%E9%87%8D%E5%A4%8D%E5%9E%8B%E4%BA%BA%E6%A0%BC%E9%81%87%E5%88%B0%E7%BE%8E%E9%A3%9Fbelike"
+    },
+    {
+     "title": "当我不知道怎么办又没有不良嗜好的时候belike",
+     "platform": "哔哩哔哩",
+     "rank": 7,
+     "day": "2026-10-10",
+     "url": "https://www.bilibili.com/video/av117376423170202/"
+    },
+    {
+     "title": "9月30号国庆前最后一天belike",
+     "platform": "抖音",
+     "rank": 8,
+     "day": "2026-09-27",
+     "url": "https://www.douyin.com/search/9%E6%9C%8830%E5%8F%B7%E5%9B%BD%E5%BA%86%E5%89%8D%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9belike"
+    },
+    {
+     "title": "我希望闺蜜对我的宠溺程度belike",
+     "platform": "哔哩哔哩",
+     "rank": 9,
+     "day": "2026-10-13",
+     "url": "https://www.bilibili.com/video/av117421922848805/"
+    },
+    {
+     "title": "复仇者联盟内心独白belike",
+     "platform": "哔哩哔哩",
+     "rank": 17,
+     "day": "2026-09-19",
+     "url": "https://www.bilibili.com/video/av117291614213839/"
+    },
+    {
+     "title": "我就这样被国庆抛弃belike",
+     "platform": "抖音",
+     "rank": 19,
+     "day": "2026-10-07",
+     "url": "https://www.douyin.com/search/%E6%88%91%E5%B0%B1%E8%BF%99%E6%A0%B7%E8%A2%AB%E5%9B%BD%E5%BA%86%E6%8A%9B%E5%BC%83belike"
+    },
+    {
+     "title": "我看亚运会开幕式belike",
+     "platform": "抖音",
+     "rank": 21,
+     "day": "2026-09-20",
+     "url": "https://www.douyin.com/search/%E6%88%91%E7%9C%8B%E4%BA%9A%E8%BF%90%E4%BC%9A%E5%BC%80%E5%B9%95%E5%BC%8Fbelike"
+    },
+    {
+     "title": "当医生看病遇到同行belike：",
+     "platform": "哔哩哔哩",
+     "rank": 25,
+     "day": "2026-10-23",
+     "url": "https://www.bilibili.com/video/av117477690313800/"
+    }
+   ]
+  },
+  {
+   "cluster": "喝大水",
+   "regex": "喝大水|大水理论|大水时代",
+   "stage": "衰退",
+   "hits": 12,
+   "days_on": 7,
+   "first": "2026-10-07",
+   "last": "2026-10-22",
+   "idle_days": 5,
+   "platforms": {
+    "抖音": 3,
+    "微博": 6,
+    "知乎": 3
+   },
+   "daily": {
+    "2026-10-07": 1,
+    "2026-10-08": 4,
+    "2026-10-09": 2,
+    "2026-10-10": 2,
+    "2026-10-11": 1,
+    "2026-10-18": 1,
+    "2026-10-22": 1
+   },
+   "examples": [
+    {
+     "title": "喝大水",
+     "platform": "微博",
+     "rank": 9,
+     "day": "2026-10-08",
+     "url": "https://s.weibo.com/weibo?q=%E5%96%9D%E5%A4%A7%E6%B0%B4"
+    },
+    {
+     "title": "三甲医生回应喝大水",
+     "platform": "微博",
+     "rank": 27,
+     "day": "2026-10-08",
+     "url": "https://s.weibo.com/weibo?q=%E4%B8%89%E7%94%B2%E5%8C%BB%E7%94%9F%E5%9B%9E%E5%BA%94%E5%96%9D%E5%A4%A7%E6%B0%B4"
+    },
+    {
+     "title": "如何看待「喝大水理论」走红？反映了背后哪些现象？",
+     "platform": "知乎",
+     "rank": 27,
+     "day": "2026-10-10",
+     "url": "https://www.zhihu.com/question/2091539021641900173"
+    },
+    {
+     "title": "全网进入大水时代",
+     "platform": "抖音",
+     "rank": 34,
+     "day": "2026-10-07",
+     "url": "https://www.douyin.com/search/%E5%85%A8%E7%BD%91%E8%BF%9B%E5%85%A5%E5%A4%A7%E6%B0%B4%E6%97%B6%E4%BB%A3"
+    },
+    {
+     "title": "最近网络上盛行「大水理论」，「薄肌理论」等幽默又朴素的观点，这种网络文化的兴起源于什么？",
+     "platform": "知乎",
+     "rank": 34,
+     "day": "2026-10-09",
+     "url": "https://www.zhihu.com/question/2090969064629876220"
+    },
+    {
+     "title": "严肃进入喝大水时代",
+     "platform": "微博",
+     "rank": 41,
+     "day": "2026-10-08",
+     "url": "https://s.weibo.com/weibo?q=%E4%B8%A5%E8%82%83%E8%BF%9B%E5%85%A5%E5%96%9D%E5%A4%A7%E6%B0%B4%E6%97%B6%E4%BB%A3"
+    },
+    {
+     "title": "黑猫喊你进入喝大水时代",
+     "platform": "抖音",
+     "rank": 55,
+     "day": "2026-10-22",
+     "url": "https://www.douyin.com/search/%E9%BB%91%E7%8C%AB%E5%96%8A%E4%BD%A0%E8%BF%9B%E5%85%A5%E5%96%9D%E5%A4%A7%E6%B0%B4%E6%97%B6%E4%BB%A3"
+    },
+    {
+     "title": "大水时代是什么梗",
+     "platform": "抖音",
+     "rank": 80,
+     "day": "2026-10-11",
+     "url": "https://www.douyin.com/search/%E5%A4%A7%E6%B0%B4%E6%97%B6%E4%BB%A3%E6%98%AF%E4%BB%80%E4%B9%88%E6%A2%97"
+    }
+   ]
+  }
+ ]
+}

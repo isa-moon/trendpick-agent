@@ -1,0 +1,6 @@
+.DS_Store
+__pycache__/
+*.pyc
+cases/data/
+cases/rox/raw/
+submission/
