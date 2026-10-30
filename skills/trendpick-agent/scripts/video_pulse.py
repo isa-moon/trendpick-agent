@@ -29,7 +29,7 @@ def load_items(path):
 
 def word_pattern(w):
     """拉丁字母词按词边界匹配，词内空格可有可无（"desert camping" 能命中 #desertcamping，
-    "cat" 不会命中 "catch"，"hatta" 不会命中 "hattaweeqal"）；#开头只匹配标签；其他文字按子串。"""
+    "cat" 不会命中 "catch"，"tank" 不会命中 "thank"）；#开头只匹配标签；其他文字按子串。"""
     w = w.strip().lower()
     if w.startswith("#"):
         return re.compile("#" + re.escape(w[1:]).replace(r"\ ", "") + r"(?![\w])")

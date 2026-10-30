@@ -11,13 +11,13 @@
                          [--asof YYYY-MM-DD] [--min-days 1] [--json OUT.json]
   python3 trend_stage.py FILE [FILE ...] --cluster 名称=正则 [--cluster ...] [--show 8]
   python3 trend_stage.py FILE [FILE ...] --patterns [--middle] [--top 40]
-  --grep  只保留标题含任一关键词的话题（| 分隔；正则里没有小写字母时区分大小写，ANTA 不会命中 Fantasy）。单个标题寿命太短，不给阶段，只用来找线索
+  --grep  只保留标题含任一关键词的话题（| 分隔；正则里没有小写字母时区分大小写，NOVA 不会命中 Innovation）。单个标题寿命太短，不给阶段，只用来找线索
   --cluster  梗级聚类：热榜标题几乎每天都换写法，单标题很少在榜超过 2 天，
              所以判断一个梗的生命周期要把它的变体合成一簇看逐日曲线
   --show   每簇显示多少条代表条目（默认 8，0 = 全部），查误命中时调大
   --patterns 句式梗发现：找在多天、多个不同标题里反复出现的开头/结尾片段
              （如「…XX 刺客」「…XX 自由」），输出候选，交给 --cluster 复核
-  --middle 和 --patterns 一起用：也统计标题中间的片段（「纯 X」「手搓」这类），噪音更多
+  --middle 和 --patterns 一起用：也统计标题中间的片段（「纯 X」「X 搭子」这类），噪音更多
   --asof  以哪一天为「今天」判断新旧；默认取数据里最晚的上榜日
 """
 import argparse, csv, json, re, sys, zipfile
@@ -90,7 +90,7 @@ def norm_title(t):
 
 
 def compile_rx(rx):
-    # 纯大写的拉丁词（品牌名 ANTA、FILA）不区分大小写会误命中 Fantasy、Filament，所以这种情况区分大小写
+    # 纯大写的拉丁词（品牌名缩写，如 NOVA）不区分大小写会误命中 Innovation，所以这种情况区分大小写
     bare = re.sub(r"\\.", "", rx)
     return re.compile(rx, 0 if re.search(r"[A-Z]", bare) and not re.search(r"[a-z]", bare) else re.I)
 

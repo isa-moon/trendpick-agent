@@ -68,16 +68,16 @@ npx skills add isa-moon/trendpick-agent -g
    rm -rf "$tmp"
    ```
    只替换 `trendpick-agent` 这一个文件夹，不要动 skills 目录里的其他 skill
-4. 验证：`test -f "$dest/trendpick-agent/SKILL.md" && python3 "$dest/trendpick-agent/scripts/trend_stage.py" -h >/dev/null && echo OK`（没有 Python 时只检查 SKILL.md）。然后告诉用户装在哪、要重启 Agent，以及可以怎么开始用（见下）
+4. 验证：`test -f "$dest/trendpick-agent/SKILL.md" && python3 "$dest/trendpick-agent/scripts/trend_stage.py" -h >/dev/null && echo OK`（没有 Python 时只检查 SKILL.md）。然后告诉用户装在哪、要重启 Agent，以及可以怎么开始用（见下，品牌换成用户自己的，不要用本仓库案例里的品牌）
 5. 不需要现在装蓝优选热点 MCP 或 KOX。第一次使用时 skill 会检查，缺了再提示
 
 ## 使用
 
 装好后在对话里说：
 
-- 「热点选题助手，帮星巴克看看这个月有什么热梗能借，下周上线」
-- 「帮极石 ROX 出几个中东的借势选题，TikTok 为主」
-- 「最近那个『不烧心』的梗我们能不能追？」
+- 「热点选题助手，帮我们品牌看看这个月有什么热梗能借，下周上线」
+- 「我们是做护肤品的，帮我们出几个东南亚的借势选题，TikTok 为主」
+- 「最近热榜上那个梗，我们能不能追？」
 - 「每周一帮我看看有什么能追的热点」（定期监测，只报和上次相比的变化）
 
 第一次使用时会问台账放在哪（默认 `~/Documents/选题台账/`，一个品牌一个文件）。每次的选题方案也存在这个目录里，文件名是 `<品牌>-<日期>-选题.md`。
