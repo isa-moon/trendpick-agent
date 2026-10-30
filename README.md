@@ -105,7 +105,7 @@ trendpick-agent/
 │   ├── references/
 │   │   ├── judgment.md           判断标准：先查自己、大环境、红黄线、生命周期、五维、追等跳过
 │   │   ├── sources.md            数据来源与取数，含实测可用性和坑
-│   │   ├── card-format.md        交付物格式：开头三行、推荐卡、跳过表、拍板、数据说明
+│   │   ├── card-format.md        交付物格式：开头几行、推荐卡、跳过表、拍板、数据说明
 │   │   └── ledger.md             选题台账：品牌档案、只追加、读回规则
 │   └── scripts/
 │       ├── trend_stage.py        热榜聚类、逐日曲线、生命周期初判、句式梗发现
