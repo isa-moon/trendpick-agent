@@ -266,12 +266,22 @@ def run_clusters(a, recs, rank, asof):
             flat = weeks[1] > 0 and 0.75 * weeks[1] <= weeks[0] <= 1.5 * weeks[1]
         else:
             flat = False
-        steady = span_days >= 10 and med >= 1 and flat and max(weeks) <= min(8, 2 * med + 2)
+        steady_short = span_days >= 10 and med >= 1 and flat and max(weeks) <= min(8, 2 * med + 2)
+        # 原规则保留（长跨度、量不小、没有峰、最近两周不在涨），新规则只补它漏掉的短跨度小簇
+        steady_long = (len(weeks) >= 5 and min(weeks) > 0 and med >= 2 and sum(weeks) >= 10
+                       and max(weeks) <= min(8, 2 * med)
+                       and sum(weeks[:2]) / 2 <= 1.5 * sum(weeks[2:]) / len(weeks[2:]))
+        steady = steady_short or steady_long
         if len(seen) < 10:
             print(f"⚠ 只有 {len(seen)} 条：阶段不稳，不能只凭曲线判爆发。剔除误命中后重跑，逐条看代表条目，并结合'是不是常驻句式'复核")
         if steady:
             print(f"⚠ 跨 {span_days} 天、每周都有、没有明显的峰且不在涨：可能是常驻说法，不是热梗。"
                   "先看代表条目是不是日常用语（judgment.md §3）")
+        # 低量长尾：一个多月前就有、单周从没超过 5 条。这种簇的"爆发"多半只是 1→4 的小波动，
+        # 不是新梗起量。2026-11 事后验证：「大结果」10/27 时 W0:4 W1:3 被判爆发，实际之后两周各 4 条平走
+        elif stage.startswith("爆发") and span_days >= 28 and max(weeks) <= 5:
+            print(f"⚠ 判'爆发'，但首次出现已 {span_days} 天、单周最多 {max(weeks)} 条：低量长尾，'爆发'可能只是小幅波动。"
+                  "如果是句式梗，不写'必须 X 日前上线'的期限，先当常驻说法复核；季节、天气、节点按日期排期，不受影响（judgment.md §3）")
         print("平台：" + " ".join(f"{p}×{n}" for p, n in sorted(plats.items(), key=lambda x: -x[1])))
         # 逐日曲线（按周分行，便于肉眼看起落）
         d, line = date.fromisoformat(days[0]), []
