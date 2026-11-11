@@ -252,15 +252,26 @@ def run_clusters(a, recs, rank, asof):
         weeks = [sum(n for d, n in daily.items() if k * 7 <= (asof - date.fromisoformat(d)).days < k * 7 + 7)
                  for k in range((asof - date.fromisoformat(days[0])).days // 7 + 1)]
         print("逐周（W0 = 最近 7 天）：" + " ".join(f"W{k}:{n}" for k, n in enumerate(weeks)))
-        # 常驻：每周都有、量不小、没有峰，而且最近两周没有在涨（慢热的新梗会在涨）
+        # 常驻：没有峰、跨度长、最近两周没有在涨（慢热的新梗会在涨）。
+        # 2026-11 事后验证修正：原规则要求"≥5 周且总数 ≥10"，漏掉了「大结果」这类
+        # 8 条 / 跨 2 周 / 每周都在但完全不涨的簇，被误读成"爆发"。改为看斜率 + 中位数，不再卡总数。
         med = sorted(weeks)[len(weeks) // 2]
-        steady = (len(weeks) >= 5 and min(weeks) > 0 and med >= 2 and sum(weeks) >= 10
-                  and max(weeks) <= min(8, 2 * med)
-                  and sum(weeks[:2]) / 2 <= 1.5 * sum(weeks[2:]) / len(weeks[2:]))
+        span_days = (asof - date.fromisoformat(days[0])).days
+        if len(weeks) > 2:
+            recent = sum(weeks[:2]) / 2
+            earlier = sum(weeks[2:]) / len(weeks[2:])
+            flat = earlier > 0 and 0.75 * earlier <= recent <= 1.5 * earlier
+        elif len(weeks) == 2:
+            # 只有两周时没有"更早的基线"可看，用周环比：掉到 75% 以下算衰退，不是常驻
+            flat = weeks[1] > 0 and 0.75 * weeks[1] <= weeks[0] <= 1.5 * weeks[1]
+        else:
+            flat = False
+        steady = span_days >= 10 and med >= 1 and flat and max(weeks) <= min(8, 2 * med + 2)
         if len(seen) < 10:
-            print(f"⚠ 只有 {len(seen)} 条：阶段对一两条的增减很敏感，剔除误命中后重跑，并逐条看代表条目")
+            print(f"⚠ 只有 {len(seen)} 条：阶段不稳，不能只凭曲线判爆发。剔除误命中后重跑，逐条看代表条目，并结合'是不是常驻句式'复核")
         if steady:
-            print("⚠ 连续 5 周以上每周都有、没有明显的峰：可能是常驻说法，不是热梗（judgment.md §3）")
+            print(f"⚠ 跨 {span_days} 天、每周都有、没有明显的峰且不在涨：可能是常驻说法，不是热梗。"
+                  "先看代表条目是不是日常用语（judgment.md §3）")
         print("平台：" + " ".join(f"{p}×{n}" for p, n in sorted(plats.items(), key=lambda x: -x[1])))
         # 逐日曲线（按周分行，便于肉眼看起落）
         d, line = date.fromisoformat(days[0]), []
