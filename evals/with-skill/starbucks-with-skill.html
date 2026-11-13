@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<meta name="generator" content="trendpick-agent render_html.py">
+<title>星巴克中国 · 借势选题（国内｜下周上线）</title>
+<style>
+/* 热点选题助手 · 选题方案固定样式
+   只有浅色，不跟随系统切换夜间模式。不要改这个文件，也不要在 HTML 里另写样式：
+   换模型、换电脑，出来的都是同一个样子。规范见 references/html-style.md */
+
+:root {
+  color-scheme: light;
+  --bg: #f5f3ee;
+  --paper: #ffffff;
+  --ink: #1f2328;
+  --ink-2: #4b5563;
+  --ink-3: #8a8f98;
+  --line: #e6e2d9;
+  --line-2: #efece5;
+  --head: #1d3557;
+  --link: #2457a6;
+
+  --go: #1f8a5b;      --go-bg: #e7f5ed;      --go-line: #cbe8d8;
+  --watch: #b26a00;   --watch-bg: #fdf2dc;   --watch-line: #f1dcae;
+  --skip: #5f6673;    --skip-bg: #eef0f3;    --skip-line: #dde1e7;
+  --red: #c0392b;     --red-bg: #fdecea;
+  --orange: #c2410c;  --orange-bg: #fff0e6;
+  --blue: #2457a6;    --blue-bg: #e8effa;
+  --purple: #6b46c1;  --purple-bg: #f1ebfd;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  margin: 0;
+  color: var(--ink);
+  font: 15px/1.75 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 980px; margin: 0 auto; padding: 24px 20px 64px; }
+p { margin: 8px 0; }
+strong { font-weight: 650; color: #111; }
+a { color: var(--link); text-decoration: none; border-bottom: 1px solid rgba(36, 87, 166, .25); }
+a:hover { border-bottom-color: var(--link); }
+a.url { font-size: .86em; color: var(--ink-2); border-bottom-style: dotted; word-break: break-all; }
+code {
+  font-family: "SF Mono", Menlo, Consolas, monospace; font-size: .86em;
+  background: #f3f1ec; border: 1px solid var(--line-2); border-radius: 5px; padding: .05em .35em;
+}
+pre {
+  font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12.5px; line-height: 1.6;
+  background: #faf9f6; border: 1px solid var(--line); border-radius: 10px;
+  padding: 12px 14px; overflow-x: auto; white-space: pre;
+}
+pre code { background: none; border: 0; padding: 0; font-size: inherit; }
+ul, ol { margin: 6px 0; padding-left: 1.4em; }
+li { margin: 3px 0; }
+hr { border: 0; border-top: 1px dashed var(--line); margin: 16px 0; }
+
+/* 顶部导航 */
+nav.toc {
+  position: sticky; top: 0; z-index: 5;
+  background: rgba(245, 243, 238, .94); border-bottom: 1px solid var(--line);
+}
+nav.toc .in { max-width: 980px; margin: 0 auto; padding: 9px 20px; display: flex; gap: 6px; flex-wrap: wrap; }
+nav.toc a {
+  border: 1px solid var(--line); background: var(--paper); border-radius: 999px;
+  padding: 2px 12px; font-size: 13px; color: var(--ink-2);
+}
+nav.toc a.go { color: var(--go); border-color: var(--go-line); }
+nav.toc a.watch { color: var(--watch); border-color: var(--watch-line); }
+
+/* 封面：结论数字 + 开头几行 */
+.hero, .sec {
+  background: var(--paper); border: 1px solid var(--line); border-radius: 18px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .03), 0 8px 24px rgba(29, 53, 87, .05);
+}
+.hero { padding: 28px 32px 22px; }
+.eyebrow { font-size: 12.5px; letter-spacing: .08em; color: var(--ink-3); }
+.hero h1 { font-size: 26px; line-height: 1.35; color: var(--head); margin: 6px 0 4px; }
+.meta { font-size: 13px; color: var(--ink-3); }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0 16px; }
+.stat { border: 1px solid; border-radius: 14px; padding: 12px 16px; }
+.stat .n { font-size: 30px; font-weight: 700; line-height: 1.15; }
+.stat .l { font-size: 13px; }
+.stat .s { font-size: 12px; opacity: .85; }
+.stat.go { background: var(--go-bg); border-color: var(--go-line); color: var(--go); }
+.stat.watch { background: var(--watch-bg); border-color: var(--watch-line); color: var(--watch); }
+.stat.skip { background: var(--skip-bg); border-color: var(--skip-line); color: var(--skip); }
+.facts {
+  display: grid; grid-template-columns: 88px 1fr; gap: 6px 16px; margin: 0;
+  padding-top: 14px; border-top: 1px dashed var(--line);
+}
+.facts dt { font-size: 13px; color: var(--ink-3); font-weight: 600; padding-top: 2px; }
+.facts dd { margin: 0; }
+.callout {
+  margin: 16px 0 0; background: #fff8e6; border: 1px solid #f3dfa8;
+  border-left: 4px solid var(--watch); border-radius: 12px; padding: 10px 16px;
+}
+.callout p { margin: 4px 0; }
+
+/* 章节 */
+.sec { padding: 22px 28px; margin-top: 18px; scroll-margin-top: 56px; }
+.sec h2 { font-size: 19px; color: var(--head); margin: 0 0 10px; display: flex; align-items: center; gap: 10px; }
+.sec h2::before { content: ""; flex: none; width: 6px; height: 20px; border-radius: 3px; background: var(--head); }
+.sec-go h2::before { background: var(--go); }
+.sec-watch h2::before { background: var(--watch); }
+.sec-skip h2::before { background: var(--skip); }
+.sec h3 { font-size: 16px; color: var(--head); margin: 18px 0 6px; }
+.sec h4 { font-size: 15px; color: var(--ink-2); margin: 14px 0 4px; }
+details.sec summary { cursor: pointer; list-style: none; }
+details.sec summary::-webkit-details-marker { display: none; }
+details.sec summary h2 { margin: 0; }
+details.sec summary h2::after { content: "展开"; margin-left: auto; font-size: 12px; font-weight: 400; color: var(--ink-3); }
+details.sec[open] summary h2 { margin-bottom: 10px; }
+details.sec[open] summary h2::after { content: "收起"; }
+
+/* 表格 */
+.table-wrap { overflow-x: auto; margin: 10px 0; border: 1px solid var(--line); border-radius: 12px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; line-height: 1.65; }
+th { background: #f4f2ec; color: var(--ink-2); font-weight: 600; text-align: left; white-space: nowrap; }
+th, td { padding: 9px 12px; border-bottom: 1px solid var(--line-2); vertical-align: top; }
+td { min-width: 6em; }
+tbody tr:nth-child(even) td { background: #fbfaf7; }
+tbody tr:last-child td { border-bottom: 0; }
+
+/* 标签 */
+.tag, .pill {
+  display: inline-block; font-size: 12px; line-height: 1.7; padding: 0 8px; border-radius: 999px;
+  margin: 1px 4px 1px 0; white-space: nowrap; background: var(--skip-bg); color: var(--skip); font-weight: 600;
+}
+.tag.red, .pill.red { background: var(--red-bg); color: var(--red); }
+.tag.amber, .pill.amber { background: var(--watch-bg); color: var(--watch); }
+.tag.blue, .pill.blue { background: var(--blue-bg); color: var(--blue); }
+.tag.purple, .pill.purple { background: var(--purple-bg); color: var(--purple); }
+.tag.green, .pill.green { background: var(--go-bg); color: var(--go); }
+.tag.orange, .pill.orange { background: var(--orange-bg); color: var(--orange); }
+.pills { margin: 0 0 4px; }
+
+/* 选题卡 */
+.card {
+  border: 1px solid var(--line); border-left: 5px solid var(--go); border-radius: 14px;
+  padding: 16px 20px 8px; margin: 14px 0; background: var(--paper);
+}
+.card.watch { border-left-color: var(--watch); }
+.card-head { display: flex; gap: 10px; align-items: flex-start; }
+.badge {
+  flex: none; font-size: 13px; font-weight: 700; color: #fff; background: var(--go);
+  border-radius: 8px; padding: 1px 10px; margin-top: 3px;
+}
+.card.watch .badge { background: var(--watch); }
+.card h3 { margin: 0; font-size: 17.5px; line-height: 1.5; color: var(--head); }
+.lead { margin: 10px 0 6px; padding: 9px 14px; background: var(--go-bg); border-radius: 10px; color: #14532d; }
+.card.watch .lead { background: var(--watch-bg); color: #7a4a00; }
+.field { display: grid; grid-template-columns: 96px 1fr; gap: 2px 16px; padding: 10px 0; border-top: 1px solid var(--line-2); }
+.field .k { font-size: 13px; color: var(--ink-3); font-weight: 600; padding-top: 2px; }
+.field .v > :first-child { margin-top: 0; }
+.field .v > :last-child { margin-bottom: 0; }
+
+/* 五维 */
+.dims { display: grid; gap: 6px; }
+.dim { display: grid; grid-template-columns: 84px 76px 1fr; gap: 10px; align-items: baseline; }
+.dim-name { font-weight: 600; font-size: 14px; }
+.lvl { font-size: 12.5px; font-weight: 700; border-radius: 6px; padding: 0 6px; text-align: center; white-space: nowrap; }
+.lvl-strong { background: var(--go-bg); color: var(--go); }
+.lvl-mid { background: var(--watch-bg); color: var(--watch); }
+.lvl-weak { background: var(--orange-bg); color: var(--orange); }
+.lvl-conflict { background: var(--red-bg); color: var(--red); }
+.lvl-other { background: var(--skip-bg); color: var(--skip); }
+.dim-why { color: var(--ink-2); font-size: 14px; }
+
+/* 切入角度 */
+.angles { display: grid; gap: 10px; }
+.angle {
+  display: grid; grid-template-columns: 26px 1fr; gap: 10px;
+  background: #faf9f6; border: 1px solid var(--line-2); border-radius: 12px; padding: 10px 14px;
+}
+.angle-n {
+  width: 24px; height: 24px; border-radius: 50%; background: var(--head); color: #fff;
+  font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px;
+}
+.angle-name { font-weight: 650; }
+.angle p { margin: 2px 0; }
+.angle dl { display: grid; grid-template-columns: 36px 1fr; gap: 2px 10px; margin: 6px 0 2px; font-size: 14px; }
+.angle dt { color: var(--ink-3); font-weight: 600; }
+.angle dd { margin: 0; }
+
+footer { margin-top: 28px; text-align: center; font-size: 12.5px; color: var(--ink-3); }
+
+@media (max-width: 720px) {
+  .hero, .sec { padding: 18px; }
+  .hero h1 { font-size: 22px; }
+  .field, .facts { grid-template-columns: 1fr; }
+  .dim { grid-template-columns: 1fr auto; }
+  .dim-why { grid-column: 1 / -1; }
+}
+@media print {
+  html { background: #fff; }
+  nav.toc { display: none; }
+  .hero, .sec { box-shadow: none; }
+  .card, .angle, tr { break-inside: avoid; }
+}
+
+</style>
+</head>
+<body>
+<nav class="toc"><div class="in"><a class="self" href="#s0">先查自己</a><a class="go" href="#s2">追</a><a class="watch" href="#s3">等</a><a class="skip" href="#s4">跳过</a><a class="defaults" href="#s5">拍的板</a><a class="data" href="#s6">数据说明</a><a class="ledger" href="#s7">台账</a><a class="appendix" href="#s8">附录</a></div></nav>
+<main class="wrap">
+<header class="hero"><div class="eyebrow">热点选题助手 · TrendPick Agent ｜ 选题方案</div><h1>星巴克中国 · 借势选题（国内｜下周上线）</h1><div class="meta">方案日期 2026-11-13</div><div class="stats"><div class="stat go"><div class="n">1</div><div class="l">追</div><div class="s">现在就做</div></div><div class="stat watch"><div class="n">3</div><div class="l">等</div><div class="s">等信号再定</div></div><div class="stat skip"><div class="n">16</div><div class="l">跳过</div><div class="s">其中红线 5 条</div></div></div><dl class="facts"><dt>品牌自身</dt><dd><strong>负面发酵中</strong>。「消费入座」10/19 起几乎每天都在榜（<a href="https://s.weibo.com/weibo?q=%E6%98%9F%E5%B7%B4%E5%85%8B+%E6%B6%88%E8%B4%B9%E5%85%A5%E5%BA%A7" target="_blank" rel="noopener">微博#82 10-19 星巴克 消费入座</a>），10/26 <a href="https://s.weibo.com/weibo?q=%E6%98%9F%E5%B7%B4%E5%85%8B%E4%B8%8D%E6%AC%A0%E8%B0%81%E7%9A%84" target="_blank" rel="noopener">微博#31「星巴克不欠谁的」</a>，10/27 仍有<a href="https://s.weibo.com/weibo?q=%E6%98%9F%E5%B7%B4%E5%85%8B%E6%94%B9%E9%9D%A9%E5%90%8E%E5%A4%A7%E5%8E%85" target="_blank" rel="noopener">「星巴克改革后大厅直接空了」</a>。所以座位、空间、蹭坐、性价比、&quot;祛魅&quot;这几块一律不碰，整体调性降一档，不做自嘲。</dd><dt>数据</dt><dd>抖音/微博/B站/知乎热榜 2026-10-01–10-27（截至 10-27，MCP 只能查到昨天）+ 前两周基线 09-14–09-30，共 23,244 条</dd></dl><div class="callout"><p>提醒：消费入座的回应、公关口径不在本方案范围内。另外，下面唯一一条「追」是<strong>节点</strong>（立冬 × 降温），不是梗。这个月热榜上真正的句式梗只有「不烧心」一条成气候，而它已经衰退，对咖啡品牌还有功效暗示的风险。宁缺毋滥。</p></div></header>
+<section class="sec sec-self" id="s0"><h2>市场大环境（决定情绪底色）</h2><div class="table-wrap"><table><thead><tr><th>事件</th><th>证据</th><th>对本方案的约束</th></tr></thead><tbody><tr><td>西藏那曲 7.0 级地震</td><td>10/22 <a href="https://www.douyin.com/search/%E8%A5%BF%E8%97%8F%E9%82%A3%E6%9B%B2%E5%8F%91%E7%94%9F7%E7%BA%A7%E5%9C%B0%E9%9C%87" target="_blank" rel="noopener">抖音#1「西藏那曲发生7级地震」</a>；10/23 抖音#1、微博#1「西藏地震已致16死46伤」</td><td>下周上线已过 7 天静默期，但降温、初雪类内容<strong>不出现西藏、那曲、高原、雪山、晃动类画面</strong>；不做狂欢</td></tr><tr><td>姆巴佩不当言论</td><td>10/27 抖音#1「总台回应姆巴佩道歉」、微博#1「姆巴佩道歉」、知乎#1「央视已全面叫停涉及姆巴佩的赛事和广告」；知乎#11 东鹏、蒙牛宣布解约</td><td>11 月初的内容避开足球、西甲、皇马、法国队元素</td></tr><tr><td>涉日民族情绪</td><td>10/19–10/23 知乎「留学生身披旭日旗」连续上榜；10/25 知乎#1「热播日剧把中国人拍成施暴者」</td><td>视觉和文案避开日式元素和日语梗</td></tr><tr><td>双 11 进行中</td><td>10/20 微博#3「今晚8点上淘宝双11开卖」；10/27 微博#3「天猫双11和王安宇打开淘宝出发」</td><td>信息流被电商投放占满，单纯喊促销没有声量</td></tr></tbody></table></div></section>
+<section class="sec sec-self" id="s1"><h2>品牌、竞品、品类、原料自查</h2><div class="table-wrap"><table><thead><tr><th>组</th><th>状态</th><th>关键证据</th><th>影响</th></tr></thead><tbody><tr><td>品牌：星巴克</td><td><strong>负面发酵中</strong>（近 7 天仍在榜）</td><td>10/06 微博#9「中国人已经对星巴克祛魅」；10/20 知乎#24、10/21 知乎#106「消费入座」新规；10/23 微博#129「在星巴克开会1小时被提醒点单5次」；10/26 微博#31；10/27 微博#216</td><td>座位、空间、蹭坐、自习、第三空间、性价比、&quot;贵&quot;相关的梗全部跳过</td></tr><tr><td>品牌：涉政条目</td><td>红线</td><td>10/04 微博#263「美方指责星巴克在新疆开门店」；10/27 微博#138「韩国星巴克正对朝鲜大炮」</td><td>不接、不转、不玩</td></tr><tr><td>品牌：误命中</td><td>—</td><td>10/23 微博#5「赛车星冰乐向尊界汽车道歉」：「赛车星冰乐」是博主名，和星巴克无关</td><td>已从品牌结论中剔除</td></tr><tr><td>竞品翻车</td><td>已冷却（7 天以上没再上榜）</td><td>10/12 微博#1「霸王茶姬接不住爆单犯了低级失误」；10/14 知乎#30「香港证监会暂停茶百道股票交易」</td><td>不踩</td></tr><tr><td>竞品爆火</td><td>正面</td><td>10/27 微博#263「瑞幸联名王者KPL」；10/06 微博#151「瑞幸发刘亦菲宣传照」</td><td>不跟电竞、王者这条线</td></tr><tr><td>品类：咖啡</td><td><strong>健康传闻在榜</strong></td><td>10/20 知乎#9「打喷嚏震断肋骨，这和每天喝 2 杯以上咖啡的关系有多大」、微博#27「女子每天2杯咖啡打喷嚏震断肋骨」、微博#47「咖啡和防晒正透支你的骨头」；10/22 知乎#1「向同门咖啡机投毒」</td><td>任何健康暗示（暖胃、提神、驱寒、养生）都会被拿来对照，一律不写</td></tr><tr><td>品类：一人一座</td><td>负面（和品牌争议点同源）</td><td>10/13 知乎#2、微博#27「夫妻点一杯 58 元咖啡只能一人落座」</td><td>同上</td></tr><tr><td>原料：桂花</td><td><strong>食安事件</strong></td><td>10/16 微博#67「官方通报商户用硫磺熏制桂花」、知乎#28「广西通报桂花熏硫情况属实」</td><td>桂花类饮品和桂花梗这几周不主推</td></tr><tr><td>原料：南瓜、燕麦奶、栗子</td><td>无</td><td>没有相关负面条目</td><td>正常</td></tr></tbody></table></div></section>
+<section class="sec sec-go" id="s2"><h2>推荐卡（追）</h2><article class="card "><div class="card-head"><span class="badge">追</span><h3>立冬 × 降温：「冬天的第一杯热的」，11/3 起预热，11/7 立冬当天收口</h3></div><div class="field"><div class="k">借的节点</div><div class="v"><div class="pills"><span class="pill green">立冬（2026-11-07，北京时间约 17:52，来源 <a href="https://zh.wikipedia.org/wiki/立冬" target="_blank" rel="noopener">Wikipedia 立冬</a> 表格「2026-11-07 09:52 UTC」）叠加冷空气南下</span></div><p>🏔 降温话题处于平台期，节点日期已知</p><p>剩余窗口约 4–6 天（11/3–11/8），上线周期「下周」正好覆盖（理由：节点型，按日期倒推）</p></div></div><div class="field"><div class="k">为什么是现在</div><div class="v"><p>降温簇（剔除「考研热降温」「唯快不破该降温了」等误命中后）14 条 / 9 天，近 7 天 5 条、前 7 天 6 条，持平；冷空气由北向南推进，代表条目：抖音#8 10-20 <a href="https://www.douyin.com/search/%E5%BD%93%E5%88%9D%E9%9B%AA%E8%90%BD%E5%9C%A8%E5%A4%A7%E5%90%8C%E5%8F%A4%E5%9F%8E" target="_blank" rel="noopener">当初雪落在大同古城</a>、抖音#13 10-25 <a href="https://www.douyin.com/search/%E6%96%B0%E4%B8%80%E8%82%A1%E5%86%B7%E7%A9%BA%E6%B0%94%E5%B0%86%E5%BD%B1%E5%93%8D%E9%95%BF%E6%B1%9F%E4%BB%A5%E5%8C%97%E5%A4%A7%E9%83%A8" target="_blank" rel="noopener">新一股冷空气将影响长江以北大部</a>、抖音#47 10-22 冷空气袭来 可能最近要变天了。平台已开始借降温卖货：10-20 微博「全国降温天猫服饰券加码」、10-27 微博#14「降温上淘宝保暖爆款5折起」。</p></div></div><div class="field"><div class="k">五维</div><div class="v"><div class="dims"><div class="dim"><span class="dim-name">受众重合</span><span class="lvl lvl-strong">强</span><span class="dim-why">降温、穿搭类条目集中在抖音（14 条里抖音 7 条），是城市通勤人群的日常话题，和星巴克外带人群重合</span></div><div class="dim"><span class="dim-name">产品接得住</span><span class="lvl lvl-strong">强</span><span class="dim-why">热饮和外带杯是星巴克最核心的冬季场景（具体冬季新品官网首页未列出，【未验证】，按&quot;热饮&quot;通用写法）</span></div><div class="dim"><span class="dim-name">调性不冲突</span><span class="lvl lvl-mid">中</span><span class="dim-why">&quot;温暖、日常&quot;正是 §1.5 在地震和民族情绪事件后建议的情绪；但&quot;进店坐坐暖和一下&quot;会直接撞上消费入座的争议点，必须改成外带和到家场景</span></div><div class="dim"><span class="dim-name">窗口够</span><span class="lvl lvl-strong">强</span><span class="dim-why">节点日期固定，下周上线（11/2–11/8）覆盖 11/7 当天</span></div><div class="dim"><span class="dim-name">没被做烂</span><span class="lvl lvl-mid">中</span><span class="dim-why">立冬年年都有品牌做，电商平台已经在用降温；饱和度检索（blueai-social-media-data）属付费工具，<strong>未跑</strong>，判断：饮品品类扎堆是确定的，要靠角度拉开差异</span></div></div></div></div><div class="field"><div class="k">拆梗</div><div class="v"><p>结构「冬天的第一 X」句式、降温预警体、穿搭指南体 → 可借｜情绪：被一杯热的接住的小确幸 → 可借｜梗源：具体博主、具体城市的初雪视频 → 不碰</p></div></div><div class="field"><div class="k">切入角度</div><div class="v"><div class="angles"><div class="angle"><div class="angle-n">1</div><div><p><span class="angle-name">共鸣型｜冬天的第一杯热的</span></p><p>借「冬天的第一 X」句式（2026-10 抖音仍在用：10-21 抖音#9「冬天第一串车厘子糖葫芦」、10-26 抖音#75「一起去看冬天的第一场电影」）× 外带热饮杯</p><dl><dt>钩子</dt><dd>早高峰路口，呼出白气，手套里捧着一杯热的，字幕&quot;立冬，第一杯热的&quot;</dd><dt>露出</dt><dd>杯身、杯套、外带袋</dd><dt>风险</dt><dd>这个句式源自 2020 年「秋天的第一杯奶茶」，算老梗，只做画面和一句字幕，不喊&quot;冬天的第一杯星巴克&quot;口号；画面里不出现门店座位</dd></dl></div></div><div class="angle"><div class="angle-n">2</div><div><p><span class="angle-name">服务型｜降温通勤指南</span></p><p>借秋冬「穿搭指南 / 外套里面穿什么」的指南结构（10-23 抖音#75「外套里面穿什么」、10-27 抖音#29「过日子人秋冬穿搭指南」）× &quot;一件外套配一杯&quot;的热饮推荐和杯型、温度选择，用啡快提前下单、到店即取，不用在冷风里排队</p><dl><dt>钩子</dt><dd>&quot;降温了，外套里面穿什么我不管，手里拿什么我负责。&quot;露出：啡快下单页、热饮菜单</dd><dt>风险</dt><dd>不写&quot;暖胃 / 驱寒 / 提神&quot;等功效；&quot;到店即取&quot;要说清是取了就走，不碰入座话题</dd></dl></div></div><div class="angle"><div class="angle-n">3</div><div><p><span class="angle-name">玩法型｜冷空气已到货</span></p><p>借降温预警的&quot;快递体&quot;（10-05 抖音#46「冷空气已到货广东」）× 外送热饮（专星送）</p><dl><dt>钩子</dt><dd>一张快递面单式的海报，写&quot;冷空气已签收，热的随后就到&quot;</dd><dt>露出</dt><dd>专星送、外送杯封签</dd><dt>风险</dt><dd>双 11 期间容易被读成促销，<strong>不挂折扣</strong>，以免把话题引回&quot;性价比&quot;；南北温差文案不做地域调侃</dd></dl></div></div></div></div></div><div class="field"><div class="k">风险与规避</div><div class="v"><ul><li>🟡 健康暗示：品类正处在「每天 2 杯咖啡伤骨头」的传闻里，文案只写&quot;热的、暖手&quot;，不写任何身体功效</li><li>🟡 灾区语境：不出现西藏、那曲、高原、雪山画面，不用&quot;地动山摇&quot;一类的比喻</li><li>🟡 自身舆情：不拍门店座位，不写&quot;进来坐坐&quot;</li><li>🟡 绝对化：不说&quot;最暖&quot;&quot;第一名&quot;</li></ul></div></div><div class="field"><div class="k">参考内容</div><div class="v"><p>未找到（样板检索工具属付费，未运行），建议 11/3 先发一条角度 1 测评论区反应，再决定角度 2、3 的投放量</p></div></div><div class="field"><div class="k">达人类型</div><div class="v"><p>城市通勤和穿搭类中腰部达人（搭角度 2），生活方式 vlog 博主（搭角度 1）；需要具体名单可以接 douyin-kol-discovery</p></div></div></article></section>
+<section class="sec sec-watch" id="s3"><h2>观察（等）</h2><div class="table-wrap"><table><thead><tr><th>选题</th><th>当前阶段</th><th>在等什么信号</th><th>下次看</th></tr></thead><tbody><tr><td>初雪（华北、华东城市初雪）</td><td>🌱 节点未到：10-15 抖音#9「乌鲁木齐迎来初雪」，10-20 抖音#8「当初雪落在大同古城」</td><td>北京、天津、济南等城市初雪上榜后 24 小时内发。要求提前备好素材，到时只换城市名；西藏和高原城市除外</td><td>11/3 起每天看一次</td></tr><tr><td>「纯手搓 / 无 AI 手搓」</td><td>🔥 脚本初判爆发（近 7 天 8 条，前 7 天 4 条，4 个平台），<strong>但簇内含义混杂</strong>：手搓动画大赛、蛋仔手搓舞、手搓飞行滑板、「老一辈还在坚持手搓」（B站#3 10-21，实为手指舞视频）</td><td>如果 3 天内&quot;纯手搓 = 真人手工、非 AI&quot;这层意思在抖音或微博前 30 名出现 2 次以上，就可以挂咖啡师手冲和手工拉花；否则跳过</td><td>10/31</td></tr><tr><td>双 11（服务型内容）</td><td>节点：10/20 开卖，11/11 收官；热榜上的双 11 条目几乎都是天猫、京东、抖音商城投放</td><td>先等电商团队确认天猫旗舰店有没有双 11 机制。有的话，只做&quot;券怎么用、到店怎么兑&quot;这类服务型内容，不做玩梗；没有就跳过（「没被做烂」为弱，性价比又贴着自身争议点）</td><td>10/30</td></tr></tbody></table></div></section>
+<section class="sec sec-skip" id="s4"><h2>建议跳过</h2><div class="table-wrap"><table><thead><tr><th>条目</th><th>为什么看起来能追</th><th>为什么不追</th><th>类型</th></tr></thead><tbody><tr><td>「消费入座」「一人一座」及一切座位、空间、自习、第三空间梗</td><td>星巴克自己就在热榜上，&quot;自嘲一下&quot;看起来很近</td><td>品牌负面发酵中（10/19–10/27 持续上榜），任何玩笑都会被当成回应</td><td><span class="tag red">红线（自身舆情）</span></td></tr><tr><td>「不烧心」句式梗</td><td>10 月最火的句式梗：53 条 / 23 天，4 个平台，10-09 知乎#6「如何评价最近爆火的『不烧心』梗」；10-26 抖音#7「这样的景区逛着不烧心」热度还不低</td><td>① 衰退：近 7 天 7 条，前 7 天 19 条；② 咖啡说&quot;不烧心&quot;等于功效宣称，而品类正处在伤骨传闻里；③ 已被平台和商家用过（10-15 微博「京东直播间烧钱打5折不烧心」、10-19 抖音「今年双11买啥不烧心」）</td><td><span class="tag amber">时机</span><span class="tag amber">黄线</span><span class="tag blue">饱和</span></td></tr><tr><td>「纯过日子」</td><td>持续一个多月的生活方式梗（26 条 / 17 天，4 个平台），10-17 知乎#36「为什么年轻人开始流行『纯过日子』」</td><td>这个梗讲的是理性收缩、精打细算，高价咖啡来接，正好撞上「祛魅」「58 元一杯」的性价比争议，评论区会反问&quot;纯过日子的人喝星巴克？&quot;；淘宝已经在用（10-20 微博「纯过日子人今晚淘宝买什么」）</td><td><span class="tag purple">调性冲突</span><span class="tag blue">饱和</span></td></tr><tr><td>「喝大水」</td><td>饮品品牌天然相关，10-08 微博#9「喝大水」，10-10 知乎#27「如何看待『喝大水理论』走红」</td><td>衰退：10/8–10/10 是峰值，之后零星出现；黑猫已经用过（10-22 抖音「黑猫喊你进入喝大水时代」）；咖啡品牌谈&quot;多喝水&quot;有健康暗示</td><td><span class="tag amber">时机</span><span class="tag blue">饱和</span><span class="tag amber">黄线</span></td></tr><tr><td>桂花，包括「桂花香是一种非牛顿流体」</td><td>很可爱的梗，10-09 微博#67，10-26 又上知乎#21；秋季桂花饮品正当季</td><td>10/16 硫磺熏桂花官方通报（微博#67、知乎#28），原料有雷；而且下周已是 11 月，桂花季结束</td><td><span class="tag orange">原料雷</span><span class="tag amber">时机</span></td></tr><tr><td>万圣节</td><td>节点明确，南瓜元素和品牌匹配</td><td>10/31 在下周上线之前，剩余窗口 ≤ 0；热榜上万圣节只有 2 条（脚本标&quot;爆发&quot;是小样本误判）</td><td><span class="tag amber">时机</span></td></tr><tr><td>姆巴佩事件、足球西甲；旭日旗、涉日影视</td><td>三平台同日第 1，国民级关注</td><td>民族情绪事件；碰了也只能表态，那不是借势</td><td><span class="tag red">红线</span></td></tr><tr><td>西藏那曲地震</td><td>10/23 抖音、微博双第 1</td><td>灾难伤亡</td><td><span class="tag red">红线</span></td></tr><tr><td>「韩国星巴克正对朝鲜大炮」「美方指责星巴克在新疆开门店」</td><td>标题里直接带品牌名</td><td>军事和政治话题</td><td><span class="tag red">红线</span></td></tr><tr><td>咖啡伤骨传闻、咖啡机投毒</td><td>品类相关，知乎#9、知乎#1</td><td>前者回应就是功效争论，后者是刑事案件</td><td><span class="tag red">红线（案件）</span><span class="tag orange">品类舆情</span></td></tr><tr><td>瑞幸联名王者KPL、S16 英雄联盟全球总决赛</td><td>电竞热度高（S16 156 条，10-25 抖音#1「IG对战HLE」）</td><td>竞品刚占了王者这条线，跟进会被直接比较；赛事和游戏 IP 需要授权</td><td><span class="tag orange">竞品</span><span class="tag orange">IP</span></td></tr><tr><td>霸王茶姬爆单、茶百道 IPO 被查</td><td>10-12 微博#1，竞品出事</td><td>竞品翻车不踩；爆单、系统崩溃这类问题自己也可能遇到</td><td><span class="tag orange">竞品翻车</span></td></tr><tr><td>张雪：水上漂纪录、「县委书记拒绝张雪为家乡打广告」</td><td>近 7 天爆发（10/25 单日 14 条，知乎#2、微博#2），&quot;拒绝打广告&quot;自带营销梗感</td><td>梗源是真人加政务人员，属于新闻人物和政务类，不进评估；和咖啡也没有产品连接</td><td><span class="tag ">分类（新闻 / 政务）</span></td></tr><tr><td>《小城良方》《嫁金钗》《玉簟秋》等热剧</td><td>剧集爆发：小城良方 82 条，嫁金钗 86 条</td><td>IP 和肖像需要授权；小城良方 10-27 微博#32「被指医学漏洞百出」，医疗语境对饮品是雷</td><td><span class="tag orange">IP</span><span class="tag amber">黄线</span></td></tr><tr><td>「belike」句式</td><td>9–10 月持续出现，曾到抖音#1（09-17）</td><td>衰退：10/16 后只剩 2 条；常驻模板，没有时效红利</td><td><span class="tag amber">时机</span></td></tr><tr><td>「X 的含金量」</td><td>脚本初判&quot;爆发&quot;，4 个平台</td><td>实为常驻说法：9/15 起几乎每天 1 条，没有集中爆发；用了也不会被当成&quot;借势&quot;</td><td><span class="tag ">非热梗（脚本误判）</span></td></tr></tbody></table></div></section>
+<section class="sec sec-defaults" id="s5"><h2>我替你拍的板</h2><div class="table-wrap"><table><thead><tr><th>事项</th><th>默认值</th><th>改了会影响什么</th></tr></thead><tbody><tr><td>市场</td><td>国内（用户已说明）</td><td>—</td></tr><tr><td>受众</td><td>一二线城市 20–35 岁通勤白领和学生，以抖音和微博为主</td><td>如果主打 B站或小红书，角度 1 的画面感要换成更长的 vlog 叙事</td></tr><tr><td>调性禁区</td><td>用户没说。按自身舆情临时加了：座位、空间、性价比、自嘲；外加健康功效、地震灾区、足球、日式元素</td><td>消费入座舆情冷却（7 天以上不上榜）后，可解除&quot;座位&quot;以外的限制</td></tr><tr><td>数量</td><td>不设上限，按标准只出 1 条「追」</td><td>如果一定要 3 条，只能把「等」里的初雪提前备稿，或做双 11 服务型内容，不建议放宽标准</td></tr><tr><td>上线时间</td><td>&quot;下周&quot; = 11/2–11/8，可用制作时间 5–10 天</td><td>如果实际要 11/9 以后才能上，立冬就错过了，改成初雪或冬季节点</td></tr><tr><td>&quot;这个月&quot;</td><td>按 10 月热榜取数，判断时以 11 月第一周能不能用为准</td><td>—</td></tr><tr><td>品牌近期活动</td><td>没查到（官网首页无新品信息，WebSearch 不可用）。判断：星巴克中国通常在 11 月上旬推冬季、节日季产品，【未验证】</td><td>如果下周正好有冬季新品或红杯上市，立冬卡的露出应换成新品，并注意不要和自家新品发布抢注意力</td></tr><tr><td>台账位置</td><td>默认 <code>~/Documents/选题台账/星巴克中国.md</code>（本次测试未写入，见文末「台账」节）</td><td>—</td></tr></tbody></table></div></section>
+<section class="sec sec-data" id="s6"><h2>数据说明</h2><ul><li><strong>用了</strong>：hot-topics-data MCP（<code>query_hot_topics_v2</code>，平台 1/3/5/8 默认榜，<code>export_format: excel</code>），按自然周分 7 段取 09-14 到 10-27，共 23,244 条，下载到 <code>/tmp/trendpick-eval-sbux/</code>；用 <code>scripts/trend_stage.py</code> 跑了品牌、竞品、品类、原料四簇，<code>--patterns</code> 句式发现，以及约 30 个梗和节点簇；用 WebFetch 查了立冬日期（Wikipedia）、星巴克官网首页（无新品信息），并打开了一个 B站视频核对「手搓」的含义</li><li><strong>没用上</strong>：blueai-social-media-data 和 blueai-universal-crawler（付费，需要用户确认，本次未运行），所以<strong>所有「没被做烂」都是基于热榜里品牌投放条目的判断，没有做饱和度检索</strong>，参考内容一栏为空；WebSearch 在当前模型上报 <code>tool type not supported</code>；aily-keyword-trend 未调用</li><li><strong>局限</strong>：热榜条目是话题不是帖子，链接都是平台搜索页；热度值不跨平台比较，文中名次都是平台内当日名次；数据截至 10-27，10-28 当天的新情况没有覆盖；「手搓」簇含义混杂，曲线会高估</li></ul></section>
+<details class="sec sec-ledger" id="s7"><summary><h2>台账（本应写入）</h2></summary><div class="callout"><p>本应写入 <code>~/Documents/选题台账/星巴克中国.md</code>。这是第一次为该品牌建档，此前没有台账可读。</p></div>
+<pre><code># 星巴克中国 选题台账
+
+## 品牌档案
+- 市场与受众：国内；默认一二线城市 20–35 岁通勤白领和学生，以抖音和微博为主（2026-10-28 默认值，待用户确认）
+- 调性禁区（用户明确说过的）：暂无
+- 偏好（从历次选择中观察到的，注明出处日期）：暂无
+- 上线周期：用户要求&quot;下周能上线&quot;，按定题到发布 5–10 天计（2026-10-28）
+- 已知雷区：2026-10 消费入座舆情（10/19 起持续在榜），座位、空间、自习、第三空间、性价比相关话题慎用；2026-10 品类伤骨传闻，禁止健康功效暗示；2026-10 硫磺桂花通报，桂花类慎推；涉政条目（新疆门店、韩国门店对朝）一律不接
+
+## 2026-10-28 国内 第 1 次
+数据截至：2026-10-27（基线 09-14 起）
+| 梗/选题 | 阶段 | 结论 | 用户决定 | 上线日期 | 效果 | 备注 |
+|---|---|---|---|---|---|---|
+| 立冬×降温「冬天的第一杯热的」 | 节点（降温平台期） | 追 | 待定 | 11/3–11/7 | 待回填 | 外带和到家场景，不拍座位，不写功效 |
+| 初雪（华北、华东） | 节点未到 | 等 | — | — | — | 上榜后 24 小时内发，避开高原和西藏 |
+| 纯手搓 / 无 AI 手搓 | 爆发（含义混杂） | 等 | — | — | — | 10/31 复看 |
+| 双 11 服务型 | 节点 | 等 | — | — | — | 看电商机制 |
+| 不烧心 | 衰退 | 跳过 | — | — | — | 功效暗示 + 已被平台用过 |
+| 纯过日子 | 顶峰 | 跳过 | — | — | — | 撞性价比争议点 |
+| 喝大水 | 衰退 | 跳过 | — | — | — | 黑猫已用，健康暗示 |
+| 桂花 / 桂花香非牛顿流体 | 衰退 | 跳过 | — | — | — | 硫磺桂花通报 |
+| 万圣节 | 节点 | 跳过 | — | — | — | 10/31 在上线前 |
+| belike | 衰退 | 跳过 | — | — | — | |
+| 含金量 | 常驻 | 跳过 | — | — | — | 非热梗 |
+| 张雪 / 县委书记拒绝打广告 | 爆发 | 跳过 | — | — | — | 新闻人物 + 政务 |
+| 小城良方 / 嫁金钗等剧 | 爆发 | 跳过 | — | — | — | IP |
+| 瑞幸王者KPL / S16 | 爆发 | 跳过 | — | — | — | 竞品 + IP |
+| 霸王茶姬、茶百道 | 冷却 | 跳过 | — | — | — | 竞品翻车不踩 |
+| 消费入座等自身舆情 | 负面发酵中 | 跳过（红线） | — | — | — | |
+| 姆巴佩 / 足球 / 涉日 | 爆发 | 跳过（红线） | — | — | — | 民族情绪 |
+| 西藏那曲地震 | — | 跳过（红线） | — | — | — | |
+| 韩国星巴克对朝 / 新疆门店 | — | 跳过（红线） | — | — | — | 政治 |
+| 咖啡伤骨 / 咖啡机投毒 | — | 跳过（红线） | — | — | — | 品类舆情、案件 |</code></pre></details>
+<details class="sec sec-appendix" id="s8"><summary><h2>附录：关键簇曲线（trend_stage.py --cluster，截至 10-27）</h2></summary><div class="table-wrap"><table><thead><tr><th>簇</th><th>初判</th><th>条数/天数</th><th>平台</th><th>近 7 天 vs 前 7 天</th><th>复核</th></tr></thead><tbody><tr><td>品牌（星巴克等）</td><td>爆发</td><td>15/10</td><td>微博 11、知乎 4</td><td>10/19 起每天 1–3 条</td><td>负面发酵中，剔除「赛车星冰乐」误命中</td></tr><tr><td>品牌纯负面</td><td>爆发</td><td>11/10</td><td>微博 7、知乎 4</td><td>10/19–10/27 几乎每天</td><td>同上</td></tr><tr><td>不烧心</td><td>衰退</td><td>53/23</td><td>抖音 36、B站 10、微博 6、知乎 1</td><td>7 vs 19</td><td>衰退，确认</td></tr><tr><td>纯过日子</td><td>顶峰</td><td>26/17</td><td>抖音 14、微博 8、知乎 3、B站 1</td><td>4 vs 4</td><td>顶峰，且已被淘宝使用</td></tr><tr><td>喝大水</td><td>衰退</td><td>15/10</td><td>微博 8、知乎 4、抖音 3</td><td>峰值 10/8</td><td>衰退；「重大水利工程」误命中</td></tr><tr><td>降温天气</td><td>顶峰</td><td>14/9</td><td>抖音 7、微博 5</td><td>5 vs 6</td><td>节点型，按立冬日期排期</td></tr><tr><td>手搓</td><td>爆发</td><td>27/23</td><td>B站 14、抖音 9</td><td>8 vs 4</td><td>含义混杂，降为观察</td></tr><tr><td>含金量</td><td>爆发</td><td>23/20</td><td>4 平台</td><td>3 vs 2</td><td>常驻说法，脚本小样本误判</td></tr><tr><td>万圣节</td><td>爆发</td><td>2/2</td><td>抖音</td><td>1 vs 0</td><td>小样本误判</td></tr><tr><td>张雪</td><td>爆发</td><td>59/22</td><td>4 平台</td><td>10/25 单日 14 条</td><td>新闻人物，不进评估</td></tr><tr><td>姆巴佩</td><td>爆发</td><td>67/12</td><td>微博 38、知乎 17、抖音 12</td><td>10/27 单日 47 条</td><td>红线</td></tr><tr><td>西藏地震</td><td>爆发</td><td>33/4</td><td>微博 17、抖音 16</td><td>10/23 单日 26 条</td><td>红线</td></tr></tbody></table></div></details>
+<details class="sec sec-appendix" id="s9"><summary><h2>过程记录</h2></summary><p><strong>工具调用数</strong>：约 39 次，含 Bash 约 25 次、hot-topics MCP 7 次（按自然周 7 段）、WebSearch 2 次（均报 <code>tool type not supported</code>）、WebFetch 3 次（星巴克官网、Wikipedia 立冬、B站视频）、Write 1 次。</p>
+<p><strong>执行了的步骤</strong>：</p>
+<ul><li>第 0 步 读台账：<code>~/Documents/选题台账/</code> 不存在，按第一次处理</li><li>第 1 步 对齐需求：用户不回答，全部按默认值走，记在「我替你拍的板」。&quot;先查后问&quot;里的品牌近期新品没查到（WebSearch 不可用，官网首页无信息）</li><li>第 2 步 取数：7 段自然周 excel，09-14 到 10-27，用 curl 下载</li><li>第 3 步 自查：四组词 + 大环境（自己写了一个每平台每天 Top3 的小脚本来看灾难和民族情绪事件有没有冲到前 3）</li><li>第 4 步 筛与聚：<code>--patterns</code>（全量 + 只看最近 9 天两种跑法）、<code>--grep</code>、约 30 个 <code>--cluster</code></li><li>第 5–6 步：五维、决策、切入角度</li><li>第 7 步：付费的样板和饱和度工具未运行，已注明</li><li>第 8 步：交付 + 台账（写在本文件内）</li></ul>
+<p><strong>不清楚、矛盾或需要猜的地方</strong>：</p>
+<ol><li><strong>judgment.md 里直接写着本案的答案</strong>：§1 和 §1.5 的&quot;实例（2026-10，星巴克中国）&quot;列出了消费入座、58 元咖啡、骨质疏松、硫磺桂花、西藏地震、姆巴佩，§3 列出了「不烧心」的曲线。做这个测试时，我很难判断自查结论是我从数据里得出的，还是被实例引导的。作为评测会污染结果，作为 skill 也会让模型对别的品牌&quot;套用&quot;星巴克的结论。建议把实例换成其他月份、其他品牌，或者明确标成&quot;示意&quot;。</li><li><strong>节点和梗的决策规则不清楚</strong>：§5 要求&quot;至少 3 维强、且没有弱项&quot;才追，但节点类（立冬、双 11）的「没被做烂」几乎必然是中或弱，而饱和度检索又依赖付费工具。我按&quot;中&quot;处理立冬、按&quot;弱&quot;处理双 11，结论因此一个是追、一个是等，这个分界是我拍的。另外「等」的规则只写了&quot;节点未到&quot;，双 11 这种&quot;节点进行中但做烂了&quot;该归等还是跳过，没有说明。</li><li><strong>&quot;下周能上线&quot;怎么换算成窗口公式里的天数，没有说明</strong>：公式是&quot;剩余窗口 = 还能热多久 − 制作上线周期&quot;，但用户给的是上线日期区间，不是制作周期。我按 11/2–11/8 上线、5–10 天制作来算。</li><li><strong>竞品范围没有定义</strong>：茶饮（霸王茶姬、茶百道）算不算星巴克的竞品，我是猜的，算了进去。</li><li><strong>台账规则和&quot;不能追问&quot;冲突</strong>：skill 要求&quot;第一次使用时向用户确认位置&quot;，和用户不回答的设定冲突，我只能按默认值处理。</li><li><strong>card-format 的计数口径不清</strong>：「建议跳过 K 条（其中红线 X 条）」，是热榜上所有红线条目都要列进来（那会有上百条），还是只列&quot;看起来能追&quot;的？我只列了和品牌相关、或者热度足以让人想追的。</li></ol>
+<p><strong>脚本的问题</strong>：</p>
+<ol><li><strong>小样本误判&quot;爆发&quot;</strong>：<code>cluster_stage</code> 没有最低条数门槛。万圣节 2 条（近 7 天 1 条 vs 前 7 天 0 条）被判&quot;爆发&quot;；「含金量」是 9 月起每天 1 条的常驻说法，3 vs 2 也被判&quot;爆发&quot;。建议加门槛，例如近 7 天少于 5 条时只给&quot;萌芽 / 样本不足&quot;。</li><li><strong><code>--grep</code> 和总览模式的单标题阶段几乎全是&quot;衰退&quot;</strong>：因为单个标题只在榜 1 天，这一列基本是噪音，容易误导读者。</li><li><strong><code>--patterns</code> 只找标题头尾片段</strong>：「纯过日子」「手搓」这类出现在标题中间的梗找不出来，我是从 <code>--grep</code> 结果里人工看出来的；头部片段几乎被人名、剧名、赛事占满。</li><li><strong>代表条目固定只显示 8 条</strong>，没有导出全部命中标题的选项。要检查误命中（「考研热却在降温」「唯快不破该降温了」「重大水利工程」「赛车星冰乐」都是误命中），我只能 import <code>read_xlsx</code> 自己写脚本。<code>--json</code> 输出里簇名的键是 <code>cluster</code>，文档里没写。</li><li><strong>节点类也按曲线判阶段</strong>：双 11 被判&quot;衰退&quot;，立冬还没有条目。脚本不知道节点日期，skill 也没提示&quot;节点不要看脚本的阶段&quot;。</li><li>脚本本身没有崩溃，读 xlsx 正常。</li></ol></details>
+<footer>热点选题助手 · TrendPick Agent 生成 ｜ 判断以数据截至日期为准，上线前请再看一眼当日热搜</footer>
+</main>
+</body>
+</html>

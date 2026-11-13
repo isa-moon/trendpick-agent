@@ -5,9 +5,9 @@ description: >-
   Trigger when the user names "热点选题助手"/"TrendPick"/"trendpick-agent"; asks for 热点选题、借势选题、蹭热点、追热梗、热梗营销、这个月有什么热点能用、品牌怎么借势、社交热点雷达、热点和品牌关联、trendjacking, newsjacking, "what trends can our brand ride", "TikTok trends for our brand"; or asks to 定期监测热点 for a brand ("每周帮我看看有什么能追的热点").
   Do not trigger for pure hot-list lookups with no brand angle (只想看今天热搜 → use the hot-topics data tool directly), 舆情危机处置, finding influencers without a topic (use KOX / 抖音达人 skills), or writing a full script for an already-chosen topic.
 license: CC-BY-NC-4.0
-compatibility: Works on any Agent Skills platform. scripts/trend_stage.py and scripts/saturation.py need Python 3.8+ (standard library only). The saturation check reads exports from blueai-social-media-data (pay-per-item; always ask the user before running). Domestic mode is best with the hot-topics-data MCP (蓝优选热点话题); without it, falls back to web search. Overseas mode works with plain web fetch (trends24.in, Wikipedia event pages) plus KOX video search (scripts/video_pulse.py); web search is optional.
+compatibility: Works on any Agent Skills platform. scripts/trend_stage.py, saturation.py and render_html.py need Python 3.8+ (standard library only); render_html.py turns the Markdown deliverable into a fixed light-theme HTML report. The saturation check reads exports from blueai-social-media-data (pay-per-item; always ask the user before running). Domestic mode is best with the hot-topics-data MCP (蓝优选热点话题); without it, falls back to web search. Overseas mode works with plain web fetch (trends24.in, Wikipedia event pages) plus KOX video search (scripts/video_pulse.py); web search is optional.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
   category: marketing
 ---
 
@@ -46,7 +46,7 @@ metadata:
 | 5 | **判断**：五维关联度（各带依据）+ 阶段 → 给出 追 / 等 / 跳过。「没被做烂」可做饱和度检查（按条收费，先问用户） | `judgment.md` §3–5，`scripts/saturation.py` |
 | 6 | **切入点**：每个「追」给 2–3 个角度，各自写清借了梗的什么、挂在品牌的什么上 | `judgment.md` §6 |
 | 7 | **样板与达人**（可选）：真实的已发布内容做参考；需要时接达人工具 | `sources.md` §4 |
-| 8 | **交付**：选题卡 + 跳过清单 + 数据说明，存成文件，并写入台账 | `references/card-format.md` |
+| 8 | **交付**：选题卡 + 跳过清单 + 数据说明，存成 Markdown，再用脚本生成固定样式的 HTML，并写入台账 | `references/card-format.md`，`references/html-style.md` |
 
 ## 对齐需求
 
@@ -81,7 +81,7 @@ metadata:
 - [ ] 没有推荐已过峰的梗，也没有推荐上线前就会结束的节点
 - [ ] 有「建议跳过」清单，列出看起来能追、实际不该追的条目和原因
 - [ ] 参考案例全部带链接；没有链接的已标「未验证」
-- [ ] 交付物已存成文件，路径已告诉用户
+- [ ] 交付物已存成 Markdown，并用 `scripts/render_html.py` 生成了 HTML（不手写 HTML、不改样式），两个路径都已告诉用户
 - [ ] 已写入台账
 
 ## 定期监测（可选）
@@ -92,4 +92,4 @@ metadata:
 
 台账是用户的数据，不放在 skill 目录里（skill 升级会覆盖）。默认放在 `~/Documents/选题台账/<品牌>.md`，第一次使用时在对齐需求那一轮里一起问。格式见 `references/ledger.md`。
 
-每次的选题方案也存在台账目录里：`<台账目录>/<品牌>-<YYYY-MM-DD>-选题.md`。对话里给开头几行和推荐卡标题，并告诉用户文件路径。
+每次的选题方案也存在台账目录里：`<台账目录>/<品牌>-<YYYY-MM-DD>-选题.md`，旁边是同名 `.html`（`python3 scripts/render_html.py <md 路径>` 生成，样式固定，见 `references/html-style.md`）。对话里给开头几行和推荐卡标题，并告诉用户两个文件的路径。
