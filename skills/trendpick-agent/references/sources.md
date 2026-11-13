@@ -119,7 +119,7 @@ python3 scripts/trend_stage.py data/*.xlsx --patterns --top 40
 | 用途 | 国内 | 海外 |
 |---|---|---|
 | 这个梗有没有真实的爆款内容 | blueai-social-media-data 关键词搜帖子（T+1）；blueai-universal-crawler 搜抖音、B站 | KOX `search-video --query "<梗或标签>" --locations "AE,SA" --days 30 --sort views` |
-| 已有多少品牌做过（饱和度） | 同上，搜「梗 + 品类」，统计蓝 V 和品牌号的数量 | 同上，看结果里品牌账号和带货内容的占比 |
+| 已有多少品牌做过（饱和度） | blueai-social-media-data 只搜核心词，再跑 `scripts/saturation.py`；**按条收费，先问用户**（`judgment.md` §3） | KOX `search-video` 结果里品牌账号的占比（`video_pulse.py` 已输出） |
 | 没有上面的付费工具时 | 看热榜簇里有没有品牌、平台、电商条目，卡片上写上线前人工自查（`judgment.md` §3） | KOX 结果里品牌号的占比 |
 | 谁适合拍 | douyin-kol-discovery | KOX `search-video` 找发过同类内容的达人；完整 brief 用 kox-recommend |
 | 竞品合作过哪些达人 | — | KOX `query --type brand` |

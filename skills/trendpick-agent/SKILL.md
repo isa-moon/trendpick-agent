@@ -5,9 +5,9 @@ description: >-
   Trigger when the user names "热点选题助手"/"TrendPick"/"trendpick-agent"; asks for 热点选题、借势选题、蹭热点、追热梗、热梗营销、这个月有什么热点能用、品牌怎么借势、社交热点雷达、热点和品牌关联、trendjacking, newsjacking, "what trends can our brand ride", "TikTok trends for our brand"; or asks to 定期监测热点 for a brand ("每周帮我看看有什么能追的热点").
   Do not trigger for pure hot-list lookups with no brand angle (只想看今天热搜 → use the hot-topics data tool directly), 舆情危机处置, finding influencers without a topic (use KOX / 抖音达人 skills), or writing a full script for an already-chosen topic.
 license: CC-BY-NC-4.0
-compatibility: Works on any Agent Skills platform. scripts/trend_stage.py needs Python 3.8+ (standard library only). Domestic mode is best with the hot-topics-data MCP (蓝优选热点话题); without it, falls back to web search. Overseas mode works with plain web fetch (trends24.in, Wikipedia event pages) plus KOX video search (scripts/video_pulse.py); web search is optional.
+compatibility: Works on any Agent Skills platform. scripts/trend_stage.py and scripts/saturation.py need Python 3.8+ (standard library only). The saturation check reads exports from blueai-social-media-data (pay-per-item; always ask the user before running). Domestic mode is best with the hot-topics-data MCP (蓝优选热点话题); without it, falls back to web search. Overseas mode works with plain web fetch (trends24.in, Wikipedia event pages) plus KOX video search (scripts/video_pulse.py); web search is optional.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   category: marketing
 ---
 
@@ -43,7 +43,7 @@ metadata:
 | 2 | **取数**：当月热榜 + 前两周基线；海外走检索 | `references/sources.md` |
 | 3 | **先查自己**：品牌、竞品、品类、原料四组词在不在榜上，处于什么状态；再看市场大环境（灾难、战争、民族情绪事件） | `references/judgment.md` §1、§1.5 |
 | 4 | **筛与聚**：分类 → 红线过滤 → 把同一个梗的变体聚成簇 → 跑生命周期曲线 | `judgment.md` §2–3，`scripts/trend_stage.py` |
-| 5 | **判断**：五维关联度（各带依据）+ 阶段 → 给出 追 / 等 / 跳过 | `judgment.md` §4–5 |
+| 5 | **判断**：五维关联度（各带依据）+ 阶段 → 给出 追 / 等 / 跳过。「没被做烂」可做饱和度检查（按条收费，先问用户） | `judgment.md` §3–5，`scripts/saturation.py` |
 | 6 | **切入点**：每个「追」给 2–3 个角度，各自写清借了梗的什么、挂在品牌的什么上 | `judgment.md` §6 |
 | 7 | **样板与达人**（可选）：真实的已发布内容做参考；需要时接达人工具 | `sources.md` §4 |
 | 8 | **交付**：选题卡 + 跳过清单 + 数据说明，存成文件，并写入台账 | `references/card-format.md` |
@@ -67,6 +67,7 @@ metadata:
 - **数据截至哪天要写清楚**。国内热榜只到昨天；海外检索要写明检索日期。
 - **热度值不跨平台比较**。各平台热度口径不同，只看平台内名次和跨平台扩散。
 - **红线条目只解释不推荐**。灾难、伤亡、未定性的社会案件、政治、宗教、争议人物，一律进跳过清单（见 `judgment.md` §2）。
+- **付费检索先问**。按条收费的工具（如饱和度检查用的 blueai-social-media-data），跑之前告诉用户平台、检索词、条数和参考价（小红书 200 条约 6 元），用户确认才跑。这是「只问一轮」之外唯一可以再问的情况；用户不跑，按热榜推断，卡片上写明。
 - **数据给的是初判**，阶段和关联度由你结合证据复核，复核结论和理由写在卡片上。
 
 ## 完成标准
@@ -76,6 +77,7 @@ metadata:
 - [ ] 已读台账，或已说明这是第一次为该品牌做
 - [ ] 已查品牌、竞品、品类、原料的舆情和市场大环境，结论写在开头几行
 - [ ] 每张推荐卡都有：梗的来源链接、生命周期阶段和曲线依据、五维依据、窗口估计、至少一处风险说明
+- [ ] 「没被做烂」写了饱和度检查结果（平台、检索词、品牌号名单）；没做检查的，写了热榜推断和上线前自查
 - [ ] 没有推荐已过峰的梗，也没有推荐上线前就会结束的节点
 - [ ] 有「建议跳过」清单，列出看起来能追、实际不该追的条目和原因
 - [ ] 参考案例全部带链接；没有链接的已标「未验证」
